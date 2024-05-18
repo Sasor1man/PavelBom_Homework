@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <font color="#BruceWillis">Text 11</font>
-</body>
+  </head>
+  <body>
+    <div>
+      <p>
+        При кодировании цвета в устаревшем теге FONT можно указывать некоторые
+        забавные значения, например: <br />
+        <code>
+          &lt;font color="<span style="color: rgb(176, 224, 0)"
+            >#BruceWillis</span
+          >"&gt;...&lt;/font&gt; <br />
+          &lt;font color="<span style="color: rgb(202, 13, 0)">#CANDY</span
+          >"&gt;...&lt;/font&gt; <br />
+        </code>
+        Но почему?
+      </p>
+      <p>
+        Все просто, такое поведение заметили уже давно <br />
+        Еще в 2004 году
+        <a
+          href="https://scrappy-do.blogspot.com/2004/08/little-rant-about-microsoft-internet.html"
+          target="_blank"
+          >пользователь</a
+        >
+        расписал алгоритм перевода строк в цвет.
+      </p>
+      <p>
+        Согласно нему
+        <q
+          cite="https://scrappy-do.blogspot.com/2004/08/little-rant-about-microsoft-internet.html"
+        >
+          Пропущенные цифры рассматриваются как 0[...]. Неправильная цифра
+          просто интерпретируется как 0. Например, значения #F0F0F0, F0F0F0,
+          F0F0F, #FxFxFx и FxFxFx одинаковы.
+        </q>
+      </p>
+      <p>
+        Согласно правилам, цвет записывается как
+        <font color="#FF4400">color="#FF4400"</font> который будет
+        интепритироваться как
+        <font color="FF, 44, 00">color="FF, 44, 00"</font>. или
+        <span style="color: rgb(255, 68, 0)">rgb(255, 68, 0)</span>
+      </p>
+      <p>
+        Тогда цвет с названием #BruceWillis Будет записан как
+        color="#BruceWillis". Согласно алгоритму, название разделяется на 3
+        части и если количество символов не делится на 3, то добавляются 0, пока
+        число не будет делимым.
+      </p>
+      <p>
+        #BruceWillis => BruceWillis0 => Bruc eWil lis0. <br />
+        Заменяем недопустимые(символы, которые не входят в 16ричный код
+        (0-9,a-f)) и получаем : b00c e000 0000.
+      </p>
+      <p>
+        Оставляем только 2 левых символа и получаем результат: b0 e0 00 <br />
+        <font color="#BruceWillis">#BruceWillis</font> =
+        <font color="b0, e0, 00">b0 e0 00</font>
+      </p>
+      <p>Такая же ситуация с #CANDY</p>
+      <p>
+        CANDY => CANDY0 => ca nd y0 => ca 0d 00 <br />
+        <font color="#CANDY">#CANDY</font> =
+        <font color="ca, 0d, 00">ca 0d 00</font>
+      </p>
+      <p>
+        Если символов &lt; 3, то то также добавляются 0, пока символов не будет
+        3 <br />
+        Т.е 0f => 0f0 и становится RGB( 0, F, 0), который становится RGB( 00,
+        0F, 00) или 000F00 , a => a00 => RGB (a, 0, 0,) => RGB (00, aa, 00)
+      </p>
+      <p>
+        В CSS запись с недопустимыми символами игнорируется. В коде элемента
+        будет запись <br />
+        <code>
+          element.style { <br />color: <del>#CANDY</del>; <br />
+          }
+        </code>
+      </p>
+    </div>
+  </body>
 </html>
+
+<!-- Bruc eWil lis0 
+    b00c e000 0000 
+    b0 e0 00 
+    
+    ca nd y
+    ca 0d 00
+
+    qwertyuiopasdfghjklzxcvbnm 26 символов
+    qwertyuiopasdfghjklzxcvbnm0 27
+    qwertyuio pasdfghjk lzxcvbnm0
+    00 0a 00
+-->
