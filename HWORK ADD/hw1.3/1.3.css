@@ -1,34 +1,32 @@
 del {
-    color: red;
+  color: red;
 }
 
 ins {
-    color: blue;
+  color: blue;
 }
 
 .schedule {
-    
-        text-align: center;
-    
-    sup {
-        text-decoration: underline;
-    }
-    span {
+  text-align: center;
+
+  sup {
     text-decoration: underline;
-}
+  }
+  span {
+    text-decoration: underline;
+  }
 }
 
-h1 {
-    text-align: center;
+header h1 {
+  text-align: center;
 }
 p.copyright {
-    text-align: right;
+  text-align: right;
 }
-.funnytext{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold ;
-    font-size: large;
-    letter-spacing: 2px;
-    line-height: 15px;
+.funnytext {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: large;
+  letter-spacing: 2px;
+  line-height: 15px;
 }
-
