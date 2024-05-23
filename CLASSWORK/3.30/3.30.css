@@ -1,7 +1,43 @@
+* {
+    margin-top: 10px;
+}
 p {
     color: blue;
 }
 ul {
     color: green;
     list-style-type: square;
+}
+
+header {
+    border: red dotted; 
+}
+footer {
+    border: solid green 1px;
+    font-family:monospace;
+}
+.Main_Information {
+    border: solid green 1px;
+    
+    padding: 20px;
+    width: 15cm;
+}
+.Firstpar {
+    text-align: right;
+}
+.secondpar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    text-align: center;
+}
+.ThirdPar {
+    font-family: cursive;
+    word-spacing: 10px;
+    line-height: 20px;
+}
+.Albums {
+    border-top: dotted 1px;
+    border-right: double red;
+    border-bottom: green solid;
+    border-left: solid 1px blue;
 }
