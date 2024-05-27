@@ -1,5 +1,5 @@
 * {
-    margin-top: 2px;
+    margin-bottom: 20px;
 }
 p {
     color: blue;
@@ -12,6 +12,8 @@ ul {
 h1 {
     border: red dotted; 
     box-sizing: border-box;
+    background-color: yellow;
+    margin-bottom: auto;
 }
 footer {
     border: solid green 1px;
@@ -21,6 +23,9 @@ footer {
     border: solid green 1px;
     padding: 20px;
     width: 15cm;
+    background-image: url('http://fe.it-academy.by/Examples/SG1998.jpg');
+    background-repeat: no-repeat;
+    background-position: center ;
 }
 .Firstpar {
     text-align: right;
@@ -40,4 +45,5 @@ footer {
     border-right: double red;
     border-bottom: green solid;
     border-left: solid 1px blue;
+    background-image: url('http://fe.it-academy.by/Examples/skrip.gif');
 }
