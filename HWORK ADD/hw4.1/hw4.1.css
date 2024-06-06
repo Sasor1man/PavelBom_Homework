@@ -1,0 +1,13 @@
+.All-In-1 {
+    background:
+        url('left-top-corner.gif') left top no-repeat,
+        url('border-roght-top-corner.gif') right top no-repeat,
+        url('border-right-bottom-corner.gif') bottom right no-repeat,
+        url('border-laft-bottom-corner.gif') bottom left no-repeat,
+        url('border-gorizontal.gif') top repeat-x,
+        url('border-gorizontal.gif') bottom repeat-x,
+        url('border-vertical.gif') right repeat-y,
+        url('border-vertical.gif') left repeat-y;
+    padding: 50px;
+
+}
