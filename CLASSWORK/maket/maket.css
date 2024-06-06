@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+}
+
+.everyheight {
+    height: 500px;
+}
+
+header {
+    height: 100px;
+    background:cadetblue;
+}
+
+footer {
+    height: 100px;
+    background:blue;
+}
+
+.left {
+    
+    width: 20%;
+    background: green;
+    float: left;
+    padding: 20px;
+
+}
+
+.menu {
+    background: yellowgreen;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.main {
+    background: purple;
+    margin-left: 10px;
+    overflow: auto;
+}
+
+.content {
+    margin: 10px;
+}
+
+.right {
+    background: seagreen;
+    float: right;
+    
+    width: 20%;
+    padding: 20px 40px 20px 20px;
+}
+
+.banner {
+    
+    height: 200px;
+    background: blanchedalmond;
+}
+
+.rasp {
+    clear: both;
+}
+
+.backgr {
+    background: pink;
+}
