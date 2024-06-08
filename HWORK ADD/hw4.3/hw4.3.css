@@ -1,6 +1,7 @@
 .one-border {
-    background: url('../../HWORK/hw4_frame/border.png');
-    background-size: cover;
+    border: 20px solid;
+    border-image: url('../../HWORK/hw4_frame/border.png') 100;
+    /* background-size: cover;
     background-size: 100% 100%;
-    padding: 50px;
+    padding: 50px; */
 }
