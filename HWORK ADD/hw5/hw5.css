@@ -1,30 +1,35 @@
 /* * {
     height: 500px;
 } */
+/* div {
+    display: flex;
+} */
 
 .left {
-    background:  url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
-    url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif) repeat;
-    width: 20%;
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif) repeat;
     /* float: left; */
-    
+    width: 20%;
 }
 
 .middle {
     background: pink;
-    overflow: auto;
+    /* overflow: auto; */
+    order: 2;
+    /* width: auto; */
+    flex-shrink: 100000000000000;
 }
 
 .right {
-    background:  url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
-    url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
-    width: 200px;
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
+    order: 3;
     /* float: right; */
-   
+    width: 200px;
 }
 
 .rasp {
@@ -34,11 +39,44 @@
 .main {
     background: red;
     display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
 }
 
 .ball {
     background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
-    url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat;
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat;
+}
+
+
+/* ................................................................................... */
+
+.Grid_Cont {
+    display: grid;
+    grid-template-columns: 20% 1fr 200px;
+    background: pink;
+}
+
+.Left_Grid {
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif) repeat;
+}
+
+.Middle_Grid {
+
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat;
+}
+
+.Right_Grid {
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
 }
