@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+}
+
+.main {
+    background: url(background-left.png) repeat-y;
+}
+
+.left {
+    background-color:goldenrod;
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+    
+}
+
+.rasp {
+    clear: both;
+}
+
+img {
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+
+header,footer {
+    background-color: aqua;
+    text-align: center;
+    color: blue;
+}
+
+h3 {
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.info {
+    overflow: auto;
+    background: url('bal.png') repeat-y right;
+    
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* .ball {
+    background: url('bal.png') repeat-y;
+    float: right;
+} */
+

@@ -1,0 +1,45 @@
+
+
+.left {
+    background-color:goldenrod;
+    width: 195px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+
+
+img {
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+
+th {
+    background-color: aqua;
+    text-align: center;
+    color: blue;
+    width:inherit;
+}
+
+.name_of_space {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+table{
+    background: url(../background-left.png) repeat-y;
+    border-collapse: collapse;
+}
+
+header,footer {
+    background-color: aqua;
+    text-align: center;
+    color: blue;
+    
+}
+
+h1,h2 {
+    margin: 0px;
+}
