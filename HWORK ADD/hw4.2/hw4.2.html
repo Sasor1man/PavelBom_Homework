@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hw4.2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        <header>
+            <h1> &lt;area&gt;</h1>
+            <p>HTML <kbd>&lt;area&gt;</kbd> элемент определяет активную область на изображении и, при желании, связывает её с
+                гипертекстовой ссылкой. Этот элемент используется только внутри элемента<kbd> &lt;map&gt;</kbd>.</p>
+        </header>
+        <div>
+            <map name="Example">
+                <area shape="circle" coords="100,88,80" href="https://developer.mozilla.org/docs/Web/HTML" alt="html" target="_blank">
+                <area shape="rect" coords="318,0,446,179" href="https://developer.mozilla.org/docs/Web/CSS" alt="css" target="_blank">
+                <area shape="poly" coords="0,181,500,181,500,250,0,250" href="https://developer.mozilla.org/docs/Web/JavaScript" alt="js" target="_blank">
+            </map>
+            <img src="example.png" alt="example" usemap="#Example">
+        </div>
+    
+    <!-- <div style="width: 500px; height: 250px; background-color: red;"></div> -->
+</body>
+
+</html>
