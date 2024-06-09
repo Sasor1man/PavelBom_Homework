@@ -1,13 +1,15 @@
-* {
+/* * {
     height: 500px;
-}
+} */
+
 .left {
     background:  url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
     url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
      url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif);
+     url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif) repeat;
     width: 20%;
-    float: left;
+    /* float: left; */
+    
 }
 
 .middle {
@@ -19,9 +21,10 @@
     background:  url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
     url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
      url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-     url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif);
+     url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
     width: 200px;
-    float: right;
+    /* float: right; */
+   
 }
 
 .rasp {
@@ -30,6 +33,7 @@
 
 .main {
     background: red;
+    display: flex;
 }
 
 .ball {
