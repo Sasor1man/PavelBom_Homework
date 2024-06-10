@@ -8,6 +8,6 @@
         url('border-gorizontal.gif') bottom repeat-x,
         url('border-vertical.gif') right repeat-y,
         url('border-vertical.gif') left repeat-y;
-    padding: 50px;
+    padding: 60px;
 
 }
