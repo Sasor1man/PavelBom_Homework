@@ -109,3 +109,136 @@ ul>li:first-child {
     background: rgba(104, 94, 214, 1);
     color: rgba(255, 255, 255, 1);
 }
+
+
+.illustration {
+    width: 690px;
+    height: 555px;
+    border: 2px black solid;
+    position: relative;
+    /* top: 195px;
+    left: 608px;
+    gap: 0px;
+    opacity: 0px; */
+
+}
+
+#illustration_vector_16 {
+    width: 182px;
+    height: 279.61px;
+    top: 253px;
+    left: 491.5px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: relative;
+}
+
+#illustration_plane_bottom {
+    /* width: 70.99px;
+    height: 27.66px; */
+    top: 495px;
+    left: 395.63px;
+    gap: 0px;
+    opacity: 0px;
+    /* rotate: -150deg; */
+    position: absolute;
+}
+
+#illustration_man_mouse {
+    position: absolute;
+    width: 7px;
+    height: 2.33px;
+    top: 89px;
+    left: 327px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+#illustration_plane_right {
+    width: 51.4px;
+    height: 22.37px;
+    top: 30.93px;
+    left: 588px;
+    gap: 0px;
+    opacity: 0px;
+    /* angle: 14.57 deg; */
+    position: absolute;
+}
+
+#illustration_plane_left {
+    width: 87.61px;
+    height: 38.13px;
+    top: 35.1px;
+    left: 0px;
+    gap: 0px;
+    opacity: 0px;
+    /* angle: 178.8 deg; */
+    position: absolute;
+}
+
+#illustration_vector_15 {
+    width: 35.21px;
+    height: 96.5px;
+    top: 46px;
+    left: 461.29px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_vector_13 {
+    width: 328.61px;
+    height: 376px;
+    top: 143.5px;
+    left: 57.39px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_vector_9 {
+    width: 48.03px;
+    height: 98px;
+    top: 170px;
+    left: 507px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_line_4 {
+    width: 444.85px;
+    top: 428.77px;
+    left: 146.33px;
+    gap: 0px;
+    border: 1.11px 0px 0px 0px;
+    opacity: 0px;
+    /* angle: -180 deg; */
+    position: absolute;
+}
+
+#illustration_bottom_avatar {
+    width: 48px;
+    height: 48px;
+    top: 330px;
+    left: 209px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_middle_avatar {
+    width: 60px;
+    height: 60px;
+    top: 191px;
+    left: 145px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+
+}
