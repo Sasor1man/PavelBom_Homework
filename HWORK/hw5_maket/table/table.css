@@ -31,6 +31,8 @@ th {
 table{
     /* background: url(../background-left.png) repeat-y; */
     border-collapse: collapse;
+    background: url('../bal.png') repeat-y right;
+    margin: -10px;
 }
 
 header,footer {
@@ -46,5 +48,5 @@ h1,h2 {
 
 .right {
     padding-left: 10px;
-    background: url('../bal.png') repeat-y right;
+    /* background: url('../bal.png') repeat-y right; */
 }
