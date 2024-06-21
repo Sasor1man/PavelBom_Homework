@@ -3,7 +3,7 @@
 .left {
     background-color:goldenrod;
     width: 195px;
-    margin-right: 10px;
+    margin-right: 200px;
     vertical-align: top;
 }
 
@@ -29,7 +29,7 @@ th {
 }
 
 table{
-    background: url(../background-left.png) repeat-y;
+    /* background: url(../background-left.png) repeat-y; */
     border-collapse: collapse;
 }
 
@@ -42,4 +42,9 @@ header,footer {
 
 h1,h2 {
     margin: 0px;
+}
+
+.right {
+    padding-left: 10px;
+    background: url('../bal.png') repeat-y right;
 }
