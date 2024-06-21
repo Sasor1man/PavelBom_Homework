@@ -1,54 +1,8 @@
-/* * {
-    height: 500px;
-} */
-/* div {
-    display: flex;
-} */
-
-.left {
-    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
-        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
-        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif) repeat;
-    /* float: left; */
-    width: 20%;
-}
-
-.middle {
-    background: pink;
-    /* overflow: auto; */
-    order: 2;
-    /* width: auto; */
-    flex-shrink: 5;
-    flex-grow: 1;
-}
-
-.right {
-    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
-        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
-        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
-    order: 3;
-    /* float: right; */
-    width: 200px;
-}
-
-.rasp {
-    clear: both;
-}
-
-.main {
-    background: red;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-}
-
 .ball {
     background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
         url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
         url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
-        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat;
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat
 }
 
 
@@ -80,4 +34,53 @@
         url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
         url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
         url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
+}
+
+/* ................................................................................... */
+
+.float_main {
+    background: blueviolet;
+    /* display: flow-root; */
+    height: 228px;
+}
+
+.rasp {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left_float {
+    width: 20%;
+    float: left;
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif) repeat;
+     height: 100%;
+}
+
+.right_float {
+    width: 200px;
+    float: right;
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
+        height: 100%;
+
+}
+
+.mid_float {
+    background: url(../../HWORK/hw5_maket/bal.png) top left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
+        url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(back_red.gif) repeat;
+    margin-right: 200px;
+    margin-left: 20%;
+    /* overflow: hidden; */
 }
