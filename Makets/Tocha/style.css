@@ -60,13 +60,14 @@ ul>li:first-child {
 
 .info_container {
     margin-top: 20px;
-    width: 383px;
+    /* max-width: 383px; */
     height: 120px;
     margin-top: 103px;
     margin-left: 165px;
     gap: 0px;
     opacity: 0px;
-
+    display: flex;
+    justify-content: space-around;
 
 }
 
@@ -114,12 +115,13 @@ ul>li:first-child {
 .illustration {
     width: 690px;
     height: 555px;
-    border: 2px black solid;
+    /* border: 2px black solid; */
     position: relative;
     /* top: 195px;
     left: 608px;
     gap: 0px;
     opacity: 0px; */
+    
 
 }
 
@@ -241,4 +243,149 @@ ul>li:first-child {
     opacity: 0px;
     position: absolute;
 
+}
+
+#illustration_middle_avatar_girl {
+    width: 50.68px;
+    height: 50.65px;
+    top: 268.62px;
+    left: 360.42px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_top_man_comp {
+    width: 180.91px;
+    height: 108.36px;
+    top: 59.16px;
+    left: 219.41px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_right_mid_plane {
+    /* width: 33.46px;
+    height: 14.34px; */
+    top: 142px;
+    left: 510px;
+    gap: 0px;
+    opacity: 0px;
+    /* angle: -65.72 deg; */
+
+    position: absolute;
+}
+
+#illustration_wifi {
+    width: 25.55px;
+    height: 15.68px;
+    top: 18.6px;
+    left: 389.75px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_bottom_chat {
+    width: 67.19px;
+    height: 24.38px;
+    top: 340.24px;
+    left: 267.77px;
+    padding: 0px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_middle_chat {
+    width: 67.19px;
+    height: 24.38px;
+    top: 280.82px;
+    left: 240.79px;
+    padding: 0px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_top_chat_top {
+    width: 101.91px;
+    height: 5.3px;
+    top: 196.33px;
+    left: 218.83px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_top_chat_bottom {
+    width: 94.29px;
+    height: 18.54px;
+    top: 214.86px;
+    left: 218.56px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_top_chat_background {
+    position: absolute;
+    width: 230.22px;
+    height: 79.5px;
+    top: 180.65px;
+    left: 126.24px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+#illustration_girl {
+    width: 172.24px;
+    height: 215.32px;
+    top: 214.84px;
+    left: 412.21px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_mobile_phone {
+    width: 258.79px;
+    height: 428.54px;
+    top: 0.4px;
+    left: 176.89px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_phone_inside_top {
+    width: 241.98px;
+    height: 161.2px;
+    top: 5.02px;
+    left: 184.96px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_middle_chat_back {
+    width: 116.34px;
+    height: 38.99px;
+    top: 273.52px;
+    left: 232.11px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#illustration_phone_back {
+    width: 250.05px;
+    height: 419.32px;
+    top: 4.99px;
+    left: 181.24px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
 }
