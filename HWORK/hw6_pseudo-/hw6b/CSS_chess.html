@@ -1,52 +1,174 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>*** unnamed text ***</title></head><body>
-<style>
+<html>
 
-  table.CHESS
-  {
-    border-collapse: collapse;
-  }
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>*** unnamed text ***</title>
+</head>
 
-  table.CHESS td
-  {
-    width: 50px;
-    height: 50px;
-    border: solid gray 1px;
-  }
+<body>
+  <style>
+    table.CHESS {
+      border-collapse: collapse;
+    }
 
-</style>
+    table.CHESS td {
+      width: 50px;
+      height: 50px;
+      border: solid gray 1px;
+    }
 
-<table class='CHESS'>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-</tr>
-</table>
+    .CHESS tr:first-child>td:nth-child(even),
+    .CHESS tr:first-child>td:nth-child(odd),
+    .CHESS tr:last-child>td:nth-child(even),
+    .CHESS tr:last-child>td:nth-child(odd),
+    .CHESS tr:nth-child(odd)>td:first-child,
+    .CHESS tr:nth-child(even)>td:first-child,
+    .CHESS tr:nth-child(even)>td:last-child,
+    .CHESS tr:nth-child(odd)>td:last-child,
+    td:last-child {
+      background: green;
+    }
 
-</body></html>
+    tr:first-child>td,
+    tr:last-child>td {
+      height: 25px;
+    }
+
+    tr>td:first-child,
+    tr>td:last-child {
+      width: 25px;
+    }
+
+    tr:nth-child(odd)>td:nth-child(even),
+    tr:nth-child(even)>td:nth-child(odd) {
+      background-color: black;
+    }
+  </style>
+
+  <table class='CHESS'>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
