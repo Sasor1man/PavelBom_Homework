@@ -1,0 +1,11 @@
+img {
+    content: url(star0.png);
+}
+
+img:hover {
+    content: url(star1.png);
+}
+
+img:has(~img:hover) {
+    content: url(star1.png);
+}
