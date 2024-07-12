@@ -1,0 +1,29 @@
+@media (max-width: 800px) {
+  .main {
+    display: flex;
+    background: none;
+  }
+  .info {
+    background: none;
+  }
+}
+@media (max-width: 800px) and (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+  .left {
+    width: auto;
+    margin-right: 0;
+  }
+  .left ul {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 800px) and (max-width: 600px) and (max-width: 390px) {
+  .left ul {
+    height: auto;
+  }
+}/*# sourceMappingURL=media.css.map */
