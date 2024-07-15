@@ -1,11 +1,42 @@
-.flex_main { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.flex_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
-.felx_left { width: 200px; background: green; -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; -webkit-box-flex: 40; -ms-flex-positive: 40; flex-grow: 40; }
-.felx_left div { margin: 20px; }
+.felx_left {
+  width: 200px;
+  background: green;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-flex: 40;
+      -ms-flex-positive: 40;
+          flex-grow: 40;
+}
 
-.flex_right { width: 300px; background: greenyellow; -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
-.flex_right div { margin: 20px; }
+.felx_left div {
+  margin: 20px;
+}
 
-.flex_mid { background: purple; -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; -ms-flex-negative: 5000000; flex-shrink: 5000000; }
+.flex_right {
+  width: 300px;
+  background: greenyellow;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
 
+.flex_right div {
+  margin: 20px;
+}
+
+.flex_mid {
+  background: purple;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-negative: 5000000;
+      flex-shrink: 5000000;
+}
 /*# sourceMappingURL=style.css.map */
