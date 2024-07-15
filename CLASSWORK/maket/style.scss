@@ -1,0 +1,28 @@
+.flex_main {
+    display: flex;
+}
+
+.felx_left {
+    width: 200px;
+    background: green;
+    order: 1;
+    flex-grow: 40;
+     div {
+         margin: 20px;
+     }
+}
+
+.flex_right {
+    width: 300px;
+    background: greenyellow;
+    order: 3;
+    div {
+        margin: 20px;
+    }
+}
+
+.flex_mid {
+    background: purple;
+    order: 2;
+    flex-shrink: 5000000;
+}
