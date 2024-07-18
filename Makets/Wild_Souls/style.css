@@ -1,7 +1,11 @@
-main {
+body {
   font-family: "Roboto", sans-serif;
-  color: black;
-  width: 1440px;
+}
+
+main {
+  background: url(./head/backgr.png) no-repeat center;
+  background-size: cover;
+  position: relative;
 }
 
 .banner {
@@ -13,6 +17,7 @@ main {
   line-height: 24px;
   text-align: center;
 }
+
 .banner p {
   top: 11px;
   position: relative;
@@ -20,28 +25,39 @@ main {
 }
 
 .head {
-  background: url(./head/backgr.png) no-repeat;
   height: 800px;
   position: relative;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 header {
   margin: auto;
   width: 1140px;
   height: 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 ul {
   width: 415px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
 }
+
 ul li {
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -56,7 +72,8 @@ h1 {
   bottom: 405px;
   width: 900px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 #logo {
@@ -92,10 +109,17 @@ h1 {
   height: 79px;
   bottom: 6.5px;
   left: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #scroll_down svg {
   position: absolute;
   width: 15px;
@@ -109,17 +133,19 @@ h1 {
   width: 392px;
   height: 57px;
   bottom: 60px;
-  left: 1018px;
+  right: 30px;
   gap: 0px;
   opacity: 0px;
   border-radius: 78px;
   background: black;
 }
+
 .cookies button {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   width: 62px;
   height: 35px;
   gap: 0px;
@@ -127,6 +153,7 @@ h1 {
   opacity: 0px;
   background: #f5afb9;
 }
+
 .cookies span {
   color: white;
   font-size: 12px;
@@ -134,16 +161,20 @@ h1 {
   line-height: 18px;
   text-align: left;
 }
+
 .cookies .first_cookie {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   left: 10px;
 }
+
 .cookies .second_cookie {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   left: 135px;
 }
 
@@ -153,15 +184,18 @@ h1 {
 
 .container_orange {
   width: 1140px;
-  height: 3448.97px;
-  top: 1.59px;
-  left: 150px;
   gap: 0px;
   opacity: 0px;
   position: relative;
   border: black solid;
+  margin: 0 auto;
 }
-.container_orange #no_gluten {
+
+.top_orange {
+  position: relative;
+}
+
+.top_orange #no_gluten {
   position: absolute;
   width: 210px;
   height: 210px;
@@ -170,25 +204,111 @@ h1 {
   gap: 0px;
   opacity: 0px;
 }
-.container_orange .wildly_loved {
+
+.top_orange .wildly_loved {
   width: 491px;
   height: 149px;
   position: absolute;
   top: 149px;
   right: 159px;
 }
-.container_orange .wildly_loved h2 {
+
+.top_orange .wildly_loved h2 {
   font-family: Roboto;
   font-size: 85px;
   font-weight: 700;
   line-height: 93.5px;
   text-align: left;
 }
-.container_orange .wildly_loved p {
+
+.top_orange .wildly_loved p {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
   text-wrap: wrap;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.container_cans {
+  position: relative;
+  top: 374.59px;
+  height: 987px;
+}
+
+.container_cans .can {
+  width: 360px;
+  height: 525.59px;
+  border-radius: 275px;
+  position: absolute;
+}
+
+.container_cans .can img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.container_cans .can h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42.12px;
+  text-align: left;
+  position: absolute;
+  top: 422px;
+}
+
+.container_cans .can h4 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 31.5px;
+  text-align: left;
+  position: absolute;
+  top: 510px;
+}
+
+.container_cans .can button {
+  position: absolute;
+  bottom: -32px;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  width: 182px;
+  height: 47px;
+  left: 14px;
+  gap: 0px;
+  border-radius: 36px;
+  opacity: 0px;
+  background: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+}
+
+.container_cans :nth-child(odd) {
+  top: 204px;
+}
+
+.container_cans .green_back {
+  background: #72a080;
+  left: -103px;
+}
+
+.container_cans .red_back {
+  background: #a95d50;
+  right: 461px;
+}
+
+.container_cans .blue_back {
+  background: #abafd6;
+  right: 41px;
+}
+
+.container_cans .yellow_back {
+  background: #fecf6b;
+  right: -21px;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+/*# sourceMappingURL=style.css.map */

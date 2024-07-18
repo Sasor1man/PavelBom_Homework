@@ -1,8 +1,11 @@
-main {
+body {
     font-family: "Roboto", sans-serif;
-    color: black;
-    width: 1440px;
-    // margin: auto;
+}
+
+main {
+    background: url(./head/backgr.png) no-repeat center;
+    background-size: cover;
+    position: relative;
 }
 
 .banner {
@@ -21,9 +24,10 @@ main {
 }
 
 .head {
-    background: url(./head/backgr.png) no-repeat;
     height: 800px;
     position: relative;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 header {
@@ -41,7 +45,6 @@ ul {
     justify-content: space-between;
     text-align: center;
     li {
-        font-family: Roboto;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
@@ -112,7 +115,7 @@ h1 {
     width: 392px;
     height: 57px;
     bottom: 60px;
-    left: 1018px;
+    right: 30px;
     gap: 0px;
     opacity: 0px;
     border-radius: 78px;
@@ -157,13 +160,16 @@ h1 {
 
 .container_orange {
     width: 1140px;
-    height: 3448.97px;
-    top: 1.59px;
-    left: 150px;
     gap: 0px;
     opacity: 0px;
     position: relative;
     border: black solid;
+    margin: 0 auto;
+}
+
+.top_orange {
+    position: relative;
+
     #no_gluten {
         position: absolute;
         width: 210px;
@@ -194,5 +200,81 @@ h1 {
             text-align: left;
             text-wrap: wrap;
         }
+    }
+}
+
+.container_cans {
+    position: relative;
+    top: 374.59px;
+    height: 987px;
+    .can {
+        width: 360px;
+        height: 525.59px;
+        border-radius: 275px;
+        position: absolute;
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        h3 {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 42.12px;
+            text-align: left;
+            position: absolute;
+            top: 422px;
+        }
+
+        h4 {
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 31.5px;
+            text-align: left;
+            position: absolute;
+            top: 510px;
+        }
+
+        button {
+            position: absolute;
+            bottom: -32px;
+            transform: translate(0, 100%);
+            width: 182px;
+            height: 47px;
+            left: 14px;
+            gap: 0px;
+            border-radius: 36px;
+            opacity: 0px;
+            background: inherit;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            text-align: center;
+        }
+    }
+
+    :nth-child(odd) {
+        top: 204px;
+    }
+
+    .green_back {
+        background: #72a080;
+        left: -103px;
+    }
+
+    .red_back {
+        background: #a95d50;
+        right: 461px;
+    }
+
+    .blue_back {
+        background: #abafd6;
+        right: 41px;
+    }
+
+    .yellow_back {
+        background: #fecf6b;
+        right: -21px;
+        transform: translate(100%, 0);
     }
 }
