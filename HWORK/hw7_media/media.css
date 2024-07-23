@@ -1,7 +1,5 @@
 @media (max-width: 800px) {
   .main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     background: none;
   }
@@ -9,13 +7,9 @@
     background: none;
   }
 }
-
 @media (max-width: 800px) and (max-width: 600px) {
   .main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .left {
     width: auto;
@@ -23,21 +17,13 @@
   }
   .left ul {
     height: 90px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
-
 @media (max-width: 800px) and (max-width: 600px) and (max-width: 390px) {
   .left ul {
     height: auto;
   }
-}
-/*# sourceMappingURL=media.css.map */
+}/*# sourceMappingURL=media.css.map */
