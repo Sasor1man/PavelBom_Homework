@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: black;
+  overflow-x: hidden;
 }
 
 main {
@@ -373,6 +374,13 @@ p {
   top: 326px;
   left: 296px;
 }
+.bottom_orange .orange_back_left {
+  height: 833px;
+  width: 2000px;
+  position: absolute;
+  right: 700px;
+  background: #be5a4b;
+}
 .bottom_orange .right_bottom_orange {
   display: flex;
   flex-direction: column;
@@ -611,6 +619,14 @@ p {
   width: 297px;
   height: 64px;
 }
+.pink_background .pink_main .pink_second_back {
+  background: #abafd6;
+  width: 2000px;
+  position: absolute;
+  top: 1368px;
+  height: 681px;
+  right: 800px;
+}
 .pink_background .pink_main .pink_third {
   position: absolute;
   top: 2419.08px;
@@ -650,7 +666,6 @@ p {
 }
 .pink_background .pink_bottom {
   height: 1479.69px;
-  border: 1px black solid;
   position: relative;
   bottom: -1164px;
   transform: translate(0%, 100%);
@@ -824,7 +839,7 @@ footer .links .link_list_right .links_cont ul:first-of-type {
 }
 footer .footer_bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   height: 120px;
   margin-top: 70.6px;
@@ -852,4 +867,28 @@ footer .footer_bottom .footer_mouth {
 footer .footer_bottom .first_love {
   width: 125.64px;
   height: 63.1px;
+}
+
+@media (max-width: 1440px) {
+  #scroll_down {
+    left: 50%;
+  }
+  .head {
+    width: auto;
+  }
+  .logo {
+    left: 46%;
+  }
+}
+@media (max-width: 1440px) and (max-width: 1300px) {
+  header {
+    width: 1000px;
+  }
+  .pink_background {
+    height: 5229.83px;
+  }
+  .pink_background .pink_bottom_second {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }/*# sourceMappingURL=style.css.map */
