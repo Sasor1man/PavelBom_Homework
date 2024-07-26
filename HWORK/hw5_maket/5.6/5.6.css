@@ -1,0 +1,18 @@
+.H1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.green_text {
+  color: green;
+}
+
+.red_text {
+  color: red;
+  font-weight: bold;
+}
+
+p {
+  font-style: italic;
+  color: blue;
+}/*# sourceMappingURL=5.6.css.map */
