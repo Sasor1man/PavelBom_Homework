@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Элемент &lt;picture&gt;
+        </h1>
+        <p>HTML-элемент <code>&lt;picture&gt;</code> служит контейнером для одного или более элементов
+            <code>&lt;source&gt;</code> и одного элемента <code>&lt;img&gt;</code> для обеспечения оптимальной версии
+            изображения для
+            различных размеров
+            экрана. Браузер рассмотрит каждый из дочерних элементов
+            <code>&lt;source&gt;</code> и выберет один, соответствующий лучшему совпадению; если совпадений среди
+            элементов
+            <code>&lt;source&gt;</code> найдено не будет, то будет выбран файл, указанный атрибутом src элемента
+            <code>&lt;img&gt;</code> . Затем
+            выбранное изображение отображается в пространстве, занятом элементом <code>&lt;img&gt;</code>.
+        </p>
+        <picture>
+            <source srcset="red_pict.gif" media="(min-width: 1280px)">
+            <source srcset="blue_pict.gif" media="(min-width: 1000px)">
+            <img src="yellow_pict.gif" alt="yellow_pict">
+        </picture>
+    </div>
+</body>
+
+</html>
