@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="narrow">
+        <form action="">
+            <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+            <label>
+                Название статьи:
+                <input type="text" name="article" id="article">
+            </label>
+            <br>
+            Рубрика:
+            <select name="heading" id="heading">
+                <option value="1">компьютерная техника</option>
+                <option value="2">графика и дизайн</option>
+                <option value="3">программирование</option>
+            </select>
+
+            <br>
+            Публикация:
+            <label for=""><input type="radio" name="publish">на сайте</label>
+            <label for=""><input type="radio" name="publish">в журнале</label>
+            <label for=""><input type="radio" name="publish">на сайте и в журнале</label>
+            <br>
+            Разрешить комментарии:
+            <input type="checkbox" name="comments" id="comments">
+            <br>
+            Текст статьи: <br>
+            <textarea name="article_text" id="article_text" cols="30" rows="10"></textarea>
+            <br>
+            <button>Опубликовать</button>
+        </form>
+    </div>
+</body>
+
+</html>

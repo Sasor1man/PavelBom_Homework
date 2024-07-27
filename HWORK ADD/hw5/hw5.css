@@ -41,7 +41,6 @@
 .float_main {
     background: blueviolet;
     /* display: flow-root; */
-    height: 228px;
 }
 
 .rasp {
@@ -61,7 +60,6 @@
         url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
         url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
         url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(green-back.gif) repeat;
-     height: 100%;
 }
 
 .right_float {
@@ -71,7 +69,6 @@
         url(../../HWORK/hw5_maket/bal.png) top right no-repeat,
         url(../../HWORK/hw5_maket/bal.png) bottom left no-repeat,
         url(../../HWORK/hw5_maket/bal.png) bottom right no-repeat, url(yellow-back.gif) repeat;
-        height: 100%;
 
 }
 
