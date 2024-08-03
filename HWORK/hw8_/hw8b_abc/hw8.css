@@ -1,0 +1,37 @@
+.images {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+.images img {
+  position: absolute;
+}
+.images #biohazard {
+  top: auto;
+  left: auto;
+}
+.images #biohazard:hover {
+  z-index: 1;
+}
+.images #Man-and-woman {
+  right: 0px;
+}
+.images #Man-and-woman:hover {
+  z-index: 1;
+}
+.images #Yin_and_Yang {
+  bottom: 0px;
+  right: 100px;
+}
+.images #Yin_and_Yang:hover {
+  z-index: 1;
+}
+.images #No_smoking {
+  top: 72px;
+  right: 72px;
+}
+
+p {
+  position: relative;
+}/*# sourceMappingURL=hw8.css.map */

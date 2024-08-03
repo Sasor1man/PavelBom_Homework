@@ -1,0 +1,72 @@
+header,
+footer {
+  background-color: aqua;
+  text-align: center;
+  color: blue;
+}
+header p,
+footer p {
+  font-size: 2em;
+  margin: 0;
+}
+
+main {
+  display: flex;
+}
+main div {
+  background-color: goldenrod;
+  min-width: 200px;
+  margin-right: 10px;
+}
+main img {
+  float: left;
+  margin: 0px 10px 10px 0px;
+}
+main h3 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+main article {
+  overflow: auto;
+  background: url("../../hw5_maket/bal.png") repeat-y right;
+}
+
+@media (max-width: 700px) {
+  header,
+  footer {
+    display: none;
+  }
+  main {
+    flex-direction: column-reverse;
+  }
+  main div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background: none;
+  }
+  main div h3 {
+    margin: 0;
+  }
+  main div ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  main div ul li {
+    list-style: none;
+    margin-left: 10px;
+  }
+  main article {
+    background: 0;
+  }
+  main article img {
+    float: none;
+    margin: auto;
+    text-align: center;
+    display: flex;
+  }
+}/*# sourceMappingURL=flex.css.map */

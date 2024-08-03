@@ -1,0 +1,73 @@
+main {
+  position: relative;
+}
+main .gate {
+  position: absolute;
+  top: 280px;
+  right: 50%;
+  height: 350px;
+  width: 700px;
+  transform: translate(50%, 0);
+  border: solid 10px black;
+  border-bottom: 0px;
+}
+main .gate .score {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: grey solid 5px;
+}
+main .gate .score:hover {
+  background-color: rgba(128, 128, 128, 0.468);
+}
+main .gate .top_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .gate .bottom_left {
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -100%);
+  left: 0;
+}
+main .gate .top_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main .gate .bottom_right {
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -100%);
+  right: 0;
+}
+main .ball {
+  width: 130px;
+  position: absolute;
+  top: 1050px;
+  right: 50%;
+  transform: translate(50%, 0);
+  transition: 0.5s;
+}
+main .ball:hover {
+  transform: rotate(180deg) translate(-50%, 0);
+}
+main .ball:active {
+  transform: scale(50%) translate(0, -900px) translate(50%, 0);
+}
+main .keeper {
+  position: absolute;
+  top: 443px;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: 100px;
+  height: 200px;
+}
+main .keeper svg {
+  width: 200px;
+  height: 400px;
+}
+main .keeper svg g {
+  transform: scale(0.5);
+}/*# sourceMappingURL=hw9bd.css.map */

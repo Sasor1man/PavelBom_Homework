@@ -1,0 +1,82 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.container header,
+.container footer {
+  background-color: aqua;
+  text-align: center;
+  color: blue;
+}
+.container header p,
+.container footer p {
+  font-size: 2em;
+  margin: 0;
+}
+.container main {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+}
+.container main menu {
+  padding: 0;
+  margin: 0;
+  background-color: goldenrod;
+}
+.container main article {
+  overflow: auto;
+  background: url("../../hw5_maket/bal.png") repeat-y right;
+}
+.container main article img {
+  float: left;
+}
+.container main article h3 {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .container header,
+  .container footer {
+    display: none;
+  }
+  .container main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  .container main article {
+    background: 0;
+    order: 1;
+  }
+  .container main article img {
+    float: none;
+    margin: auto;
+    text-align: center;
+    display: grid;
+  }
+  .container main menu {
+    order: 2;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background: none;
+  }
+  .container main menu h3 {
+    margin: 0;
+  }
+  .container main menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  .container main menu ul li {
+    list-style: none;
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=grid.css.map */

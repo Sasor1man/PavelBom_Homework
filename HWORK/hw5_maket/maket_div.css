@@ -7,11 +7,11 @@
 }
 
 .left {
-    background-color:goldenrod;
+    background-color: goldenrod;
     width: 200px;
     float: left;
     margin-right: 10px;
-    
+
 }
 
 .rasp {
@@ -23,7 +23,8 @@ img {
     margin: 0px 10px 10px 0px;
 }
 
-header,footer {
+header,
+footer {
     background-color: aqua;
     text-align: center;
     color: blue;
@@ -31,7 +32,7 @@ header,footer {
 
 h3 {
     text-align: center;
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 10px;
 }
@@ -39,7 +40,7 @@ h3 {
 .info {
     overflow: auto;
     background: url('bal.png') repeat-y right;
-    
+
 }
 
 p {
@@ -51,3 +52,13 @@ p {
     float: right;
 } */
 
+.static {
+    width: 90px;
+    position: fixed;
+    background-color: lightgreen;
+    border: green solid 1px;
+    padding: 10px;
+    text-align: center;
+    top: 10px;
+    right: 10px;
+}

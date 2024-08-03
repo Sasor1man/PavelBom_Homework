@@ -1,0 +1,76 @@
+main {
+    position: relative;
+    .gate {
+        position: absolute;
+        top: 280px;
+        right: 50%;
+        height: 350px;
+        width: 700px;
+        transform: translate(50%, 0);
+        border: solid 10px black;
+        border-bottom: 0px;
+        .score {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: grey solid 5px;
+            &:hover {
+                background-color: rgba(128, 128, 128, 0.468);
+            }
+        }
+        .top_left {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .bottom_left {
+            position: absolute;
+            top: 100%;
+            transform: translate(0, -100%);
+            left: 0;
+        }
+        .top_right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .bottom_right {
+            position: absolute;
+            top: 100%;
+            transform: translate(0, -100%);
+            right: 0;
+        }
+    }
+
+    .ball {
+        width: 130px;
+        // width: 80px;
+        position: absolute;
+        top: 1050px;
+        right: 50%;
+        transform: translate(50%, 0);
+        transition: 0.5s;
+        &:hover {
+            transform: rotate(180deg) translate(-50%, 0);
+        }
+        &:active {
+            transform: scale(50%) translate(0, -900px) translate(50%, 0);
+        }
+    }
+
+    .keeper {
+        position: absolute;
+        top: 443px;
+        right: 50%;
+        transform: translate(50%, 0);
+        width: 100px;
+        height: 200px;
+        svg {
+            width: 200px;
+            height: 400px;
+            g {
+                transform: scale(0.5);
+            }
+        }
+    }
+}
