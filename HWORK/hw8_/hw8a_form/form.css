@@ -6,14 +6,33 @@
   margin-right: 15px;
   margin-top: 10px;
 }
+.narrow .name {
+  text-wrap: nowrap;
+}
 .narrow #article {
-  max-width: 500px;
-  margin-left: 10px;
+  min-width: 185px;
+  width: calc(100% - 131px);
 }
 .narrow select {
   max-width: 299px;
 }
 .narrow #article_text {
-  max-width: 296px;
-  max-height: 57px;
+  width: 100%;
+}
+.narrow .marg {
+  margin-right: 10px;
+  width: 116px;
+  display: inline-block;
+}
+
+@media (max-width: 371px) {
+  .narrow label[for=publish] {
+    display: block;
+  }
+  .narrow .name {
+    text-wrap: wrap;
+  }
+  .narrow #article {
+    width: 100%;
+  }
 }/*# sourceMappingURL=form.css.map */
