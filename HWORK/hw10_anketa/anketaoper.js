@@ -1,4 +1,11 @@
 var namE = prompt('Введите ваше имя');
+
+while (parseInt(namE) != NaN && namE != toString(namE)) {
+    namE = prompt('Введите корректное имя');
+    // if (namE === namE.toString) break;
+}
+
+
 var surname = prompt('Введите ваше фамилию');
 var patronymic = prompt('Введите ваше отчество');
 var age = prompt('Введите ваш возраст');
