@@ -1,3 +1,16 @@
+:root {
+  --custom-white: rgba(242, 247, 255, 0.5);
+}
+
+p:hover,
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+span:hover {
+  cursor: default;
+}
+
 body {
   font-family: "Gilroy";
   font-weight: 400;
@@ -5,7 +18,14 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #1d2530;
-  background-color: rgba(242, 247, 255, 0.5);
+  background-color: var(--custom-white);
+}
+h2 {
+  font-family: Gilroy;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 64px;
+  text-align: center;
 }
 
 header {
@@ -17,6 +37,14 @@ header {
 .purple_button {
   border: none;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  background: rgb(104, 94, 214);
+  border-radius: 6px;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 .purple_button:hover {
   background: rgb(51, 175, 225);
@@ -33,9 +61,17 @@ header {
   display: flex;
   justify-content: space-between;
 }
-
-ul li:first-child {
+.menu_itm li:first-child {
   font-weight: 700;
+  color: #685ed6;
+}
+.menu_itm li a {
+  text-decoration: none;
+}
+.menu_itm li a:hover {
+  border-bottom: solid;
+}
+.menu_itm li a:active {
   color: #685ed6;
 }
 
@@ -57,31 +93,39 @@ ul li:first-child {
 }
 
 .info_container {
-  margin-top: 20px;
   /* max-width: 383px; */
-  height: 120px;
+  height: 600px;
   margin-top: 103px;
-  margin-left: 165px;
   gap: 0px;
   opacity: 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
-
-.info_left {
-  flex-direction: column;
+.info_container .info_left {
+  position: relative;
+  left: 40px;
 }
-.info_left p:first-child {
+.info_container .info_left .left_back {
+  position: absolute;
+  width: 189px;
+  height: 142px;
+  top: 250px;
+  right: 345px;
+  opacity: 40%;
+  transform: rotate(30deg);
+  z-index: -1;
+}
+.info_container .info_left p:first-child {
   font-weight: 800;
   font-size: 50px;
   line-height: 60px;
   margin-bottom: 24px;
 }
-.info_left p:first-child::first-line {
+.info_container .info_left p:first-child::first-line {
   color: #685ed6;
   font-weight: 800;
 }
-.info_left p:nth-child(2) {
+.info_container .info_left p:nth-child(2) {
   width: 482px;
   height: 102px;
   gap: 0px;
@@ -91,22 +135,20 @@ ul li:first-child {
   line-height: 34px;
   text-align: left;
 }
-.info_left p:nth-child(2) span {
+.info_container .info_left p:nth-child(2) span {
   color: #685ed6;
   font-weight: 800;
 }
-.info_left button {
+.info_container .info_left button {
   width: 168px;
   height: 48px;
   margin-top: 32px;
   padding: 12px 32px 12px 32px;
   gap: 10px;
   border-radius: 6px;
-  background: rgb(104, 94, 214);
   color: rgb(255, 255, 255);
 }
-
-.illustration {
+.info_container .illustration {
   width: 690px;
   height: 555px;
   /* border: 2px black solid; */
@@ -116,7 +158,21 @@ ul li:first-child {
   gap: 0px;
   opacity: 0px; */
 }
-.illustration #illustration_vector_16 {
+.info_container .illustration #illustration_back_purple {
+  position: absolute;
+  width: 343px;
+  height: 257px;
+  top: 172.6px;
+  left: 265px;
+  gap: 0px;
+  opacity: 0.3px;
+}
+.info_container .illustration #Turquoise_Circle {
+  position: absolute;
+  top: -51.4px;
+  left: 97px;
+}
+.info_container .illustration #illustration_vector_16 {
   width: 182px;
   height: 279.61px;
   top: 253px;
@@ -126,7 +182,7 @@ ul li:first-child {
   opacity: 0px;
   position: relative;
 }
-.illustration #illustration_plane_bottom {
+.info_container .illustration #illustration_plane_bottom {
   /* width: 70.99px;
   height: 27.66px; */
   top: 495px;
@@ -136,7 +192,7 @@ ul li:first-child {
   /* rotate: -150deg; */
   position: absolute;
 }
-.illustration #illustration_plane_right {
+.info_container .illustration #illustration_plane_right {
   width: 51.4px;
   height: 22.37px;
   top: 30.93px;
@@ -146,7 +202,7 @@ ul li:first-child {
   /* angle: 14.57 deg; */
   position: absolute;
 }
-.illustration #illustration_plane_left {
+.info_container .illustration #illustration_plane_left {
   width: 87.61px;
   height: 38.13px;
   top: 35.1px;
@@ -156,7 +212,7 @@ ul li:first-child {
   /* angle: 178.8 deg; */
   position: absolute;
 }
-.illustration #illustration_vector_15 {
+.info_container .illustration #illustration_vector_15 {
   width: 35.21px;
   height: 96.5px;
   top: 46px;
@@ -166,7 +222,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_vector_13 {
+.info_container .illustration #illustration_vector_13 {
   width: 328.61px;
   height: 376px;
   top: 143.5px;
@@ -176,7 +232,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_vector_9 {
+.info_container .illustration #illustration_vector_9 {
   width: 48.03px;
   height: 98px;
   top: 170px;
@@ -186,7 +242,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_line_4 {
+.info_container .illustration #illustration_line_4 {
   width: 444.85px;
   top: 428.77px;
   left: 146.33px;
@@ -196,7 +252,7 @@ ul li:first-child {
   /* angle: -180 deg; */
   position: absolute;
 }
-.illustration #illustration_bottom_avatar {
+.info_container .illustration #illustration_bottom_avatar {
   width: 48px;
   height: 48px;
   top: 330px;
@@ -205,7 +261,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_middle_avatar_girl {
+.info_container .illustration #illustration_middle_avatar_girl {
   width: 50.68px;
   height: 50.65px;
   top: 276.93px;
@@ -214,7 +270,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_right_mid_plane {
+.info_container .illustration #illustration_right_mid_plane {
   /* width: 33.46px;
   height: 14.34px; */
   top: 142px;
@@ -224,7 +280,7 @@ ul li:first-child {
   /* angle: -65.72 deg; */
   position: absolute;
 }
-.illustration #illustration_wifi {
+.info_container .illustration #illustration_wifi {
   width: 25.55px;
   height: 15.68px;
   top: 18.6px;
@@ -233,7 +289,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_bottom_chat {
+.info_container .illustration #illustration_bottom_chat {
   width: 67.19px;
   height: 24.38px;
   top: 340.24px;
@@ -243,7 +299,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_top_chat_background {
+.info_container .illustration #illustration_top_chat_background {
   position: absolute;
   width: 230.22px;
   height: 79.5px;
@@ -252,7 +308,7 @@ ul li:first-child {
   gap: 0px;
   opacity: 0px;
 }
-.illustration #illustration_girl {
+.info_container .illustration #illustration_girl {
   width: 172.24px;
   height: 215.32px;
   top: 214.84px;
@@ -261,7 +317,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration .phone {
+.info_container .illustration .phone {
   position: absolute;
   border-radius: 25px;
   background: #c0d8fb center;
@@ -273,25 +329,26 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration .phone div {
+.info_container .illustration .phone div {
   border-radius: 10px;
 }
-.illustration .phone #illustration_mobile_phone {
+.info_container .illustration .phone .illustration_mobile_phone {
   width: 258.79px;
   height: 428.54px;
   gap: 0px;
   opacity: 0px;
   position: absolute;
 }
-.illustration .phone #illustration_phone_top {
+.info_container .illustration .phone #illustration_phone_top {
   width: 254.25px;
   height: 169.33px;
   gap: 0px;
   opacity: 0px;
   position: absolute;
   background: #f0f6ff center;
+  border-radius: 25px 25px 0 0;
 }
-.illustration .phone #illustration_phone_top #illustration_top_man_comp {
+.info_container .illustration .phone #illustration_phone_top #illustration_top_man_comp {
   width: 180.91px;
   height: 108.36px;
   top: 56.87px;
@@ -300,7 +357,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration .phone #illustration_phone_top #illustration_man_mouse {
+.info_container .illustration .phone #illustration_phone_top #illustration_man_mouse {
   position: absolute;
   width: 7px;
   height: 2.33px;
@@ -309,7 +366,7 @@ ul li:first-child {
   gap: 0px;
   opacity: 0px;
 }
-.illustration .phone .phone_mid_top {
+.info_container .illustration .phone .phone_mid_top {
   position: absolute;
   width: 241.9px;
   height: 83.52px;
@@ -319,7 +376,7 @@ ul li:first-child {
   opacity: 0px;
   background: rgb(255, 255, 255);
 }
-.illustration .phone .phone_mid_top #illustration_middle_avatar {
+.info_container .illustration .phone .phone_mid_top #illustration_middle_avatar {
   width: 60px;
   height: 60px;
   top: 10.35px;
@@ -328,7 +385,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration .phone .phone_mid_top #illustration_top_chat {
+.info_container .illustration .phone .phone_mid_top #illustration_top_chat {
   width: 107.08px;
   height: 83.52px;
   left: 97.29px;
@@ -337,7 +394,7 @@ ul li:first-child {
   position: absolute;
   color: rgb(203, 225, 253);
 }
-.illustration .phone .phone_mid_bottom {
+.info_container .illustration .phone .phone_mid_bottom {
   width: 122.25px;
   height: 40.96px;
   top: 282.07px;
@@ -347,7 +404,7 @@ ul li:first-child {
   position: absolute;
   background: #fce29e;
 }
-.illustration .phone .phone_mid_bottom #illustration_middle_chat {
+.info_container .illustration .phone .phone_mid_bottom #illustration_middle_chat {
   width: 67.19px;
   height: 24.38px;
   top: 7.67px;
@@ -357,7 +414,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_phone_inside_top {
+.info_container .illustration #illustration_phone_inside_top {
   width: 241.98px;
   height: 161.2px;
   top: 5.02px;
@@ -366,7 +423,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_middle_chat_back {
+.info_container .illustration #illustration_middle_chat_back {
   width: 116.34px;
   height: 38.99px;
   top: 273.52px;
@@ -375,7 +432,7 @@ ul li:first-child {
   opacity: 0px;
   position: absolute;
 }
-.illustration #illustration_bottom_chat {
+.info_container .illustration #illustration_bottom_chat {
   width: 67.19px;
   height: 24.38px;
   top: 340.24px;
@@ -383,4 +440,539 @@ ul li:first-child {
   padding: 0px;
   gap: 0px;
   opacity: 0px;
+}
+
+.description {
+  height: 819px;
+  display: flex;
+  justify-content: center;
+}
+.description .positive {
+  position: relative;
+  width: 552px;
+}
+.description .positive h2 {
+  position: absolute;
+  top: 97px;
+}
+.description .positive ul {
+  position: absolute;
+  top: 197px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.description .positive ul li {
+  height: 68px;
+  position: relative;
+}
+.description .positive ul li svg {
+  display: inline-block;
+  margin-right: 26px;
+}
+.description .positive ul li .positive_text {
+  display: inline-block;
+  width: 428px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.description .positive ul li .positive_text h3 {
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+}
+.description .description_phone {
+  width: 411.46px;
+  height: 666.58px;
+  position: relative;
+  top: 70px;
+}
+.description .description_phone svg {
+  float: right;
+}
+.description .description_phone .screen {
+  height: 492px;
+  position: absolute;
+  top: 113px;
+  right: 25px;
+  overflow-y: hidden;
+}
+.description .description_phone .screen .messages {
+  position: relative;
+  margin-top: 10px;
+  float: right;
+}
+.description .description_phone .screen .messages:nth-of-type(odd) {
+  background: #effcde;
+  border-radius: 0px 5px 5px 5px;
+  box-shadow: 0px 4px 10px 0px rgba(142, 142, 147, 0.25);
+  margin-right: 49.37px;
+  padding: 8px 29px 7px 11px;
+}
+.description .description_phone .screen .messages:nth-of-type(odd) p {
+  font-family: Gilroy;
+  font-size: 11.67px;
+  font-weight: 400;
+  line-height: 17.51px;
+}
+.description .description_phone .screen .messages:nth-of-type(even) {
+  background: #f5f7f8;
+  border-radius: 4px 0px 4px 4px;
+  box-shadow: 0px 0.8px 0.8px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 10.37px;
+  max-width: 233px;
+  padding: 4px 25px 5px 9px;
+}
+.description .description_phone .screen .messages:nth-of-type(even) p {
+  font-family: Gilroy;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: left;
+}
+.description .description_phone .screen .messages:nth-of-type(7) {
+  margin-right: 119px;
+}
+.description .description_phone .screen .messages:nth-last-of-type(1) {
+  margin-right: 18px;
+}
+.description .description_phone .screen .messages span {
+  position: absolute;
+  right: 8.33px;
+  bottom: 3.85px;
+  font-family: Gilroy;
+  font-size: 7.78px;
+  font-weight: 400;
+  line-height: 9.73px;
+  display: block;
+}
+
+.tarifs_container {
+  height: 739px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tarifs_container .tarifs_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1110px;
+}
+.tarifs_container .tarifs_info h3 {
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+.tarifs_container .tarifs_info .tarif_slide {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.tarifs_container .tarifs_info .tarif_slide .tarif {
+  width: 350px;
+  height: 387px;
+  border-radius: 6px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  background: rgb(252, 254, 255);
+}
+.tarifs_container .tarifs_info .tarif_slide .tarif div:first-child {
+  background: #f4f6fd;
+  height: 61px;
+  border-radius: 6px 6px 0px 0px;
+}
+.tarifs_container .tarifs_info .tarif_slide .tarif div:first-child p {
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: center;
+  color: rgb(104, 94, 214);
+}
+.tarifs_container .tarifs_info .tarif_slide .tarif div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100% - 61px);
+}
+.tarifs_container .tarifs_info .tarif_slide .tarif div:last-child h4 {
+  font-family: Gilroy;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  width: 255px;
+}
+.tarifs_container .tarifs_info .tarif_slide .tarif div:last-child p {
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+}
+.tarifs_container .tarifs_info .tarif_slide .tarif div:last-child button {
+  width: 287px;
+  height: Hug 48px px;
+  padding: 12px 32px 12px 32px;
+  gap: 10px;
+}
+
+.instruction_container {
+  background-color: white;
+  height: 1080px;
+  position: relative;
+}
+.instruction_container .instruction {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 273px 1fr 273px 1fr 273px 1fr;
+}
+.instruction_container .instruction .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  position: relative;
+}
+.instruction_container .instruction .step div {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f1e4ff;
+  position: relative;
+}
+.instruction_container .instruction .step div span {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-family: Gilroy;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(104, 94, 214);
+}
+.instruction_container .instruction .step h3 {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 16px;
+}
+.instruction_container .instruction .step p {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin-top: 4px;
+}
+.instruction_container .instruction .step .instruction_phone {
+  margin-top: 56px;
+  z-index: 1;
+}
+.instruction_container .instruction .step:nth-of-type(4) {
+  margin-top: 102px;
+}
+.instruction_container .instruction .step .blue_left_back {
+  position: absolute;
+  left: -69.54px;
+  bottom: 44.11px;
+  transform: translate(0%, -100%);
+}
+.instruction_container .instruction .step .blue_center_back {
+  position: absolute;
+  right: -18.41px;
+  bottom: 39.77px;
+}
+.instruction_container .instruction .step .purple_center_back {
+  position: absolute;
+  left: -24px;
+  bottom: 231.07px;
+}
+.instruction_container .instruction .step .blue_left_back {
+  position: absolute;
+  left: -24px;
+  bottom: 231.07px;
+}
+.instruction_container .instruction .step .purple_right_back {
+  position: absolute;
+  left: -23px;
+  bottom: 144px;
+}
+.instruction_container .instruction .plane {
+  display: flex;
+  min-width: 200px;
+  justify-content: center;
+  position: relative;
+}
+.instruction_container .instruction .plane .instruction_plane_1 {
+  margin-top: 60px;
+}
+.instruction_container .instruction .plane .instruction_vector_1 {
+  position: absolute;
+  top: 40px;
+  left: -60px;
+}
+.instruction_container .instruction .plane .instruction_vector_2 {
+  position: absolute;
+  top: 110px;
+  right: -70px;
+}
+.instruction_container .instruction .plane_2 .instruction_plane_2 {
+  margin-top: 35px;
+}
+.instruction_container .instruction .plane_2 .instruction_vector_3 {
+  position: absolute;
+  top: 40px;
+  left: -60px;
+}
+.instruction_container .instruction .plane_2 .instruction_vector_4 {
+  position: absolute;
+  top: 88px;
+  right: -60px;
+}
+.instruction_container .custom_white {
+  position: absolute;
+  width: 100%;
+  height: 581px;
+  bottom: 0;
+  background: var(--custom-white);
+}
+
+.review_container {
+  background: var(--custom-white);
+  height: 555px;
+  position: relative;
+}
+.review_container h2 {
+  padding-top: 17px;
+}
+.review_container #quotes {
+  position: absolute;
+  right: 13%;
+  top: 0;
+}
+.review_container .review_clients {
+  width: 1110px;
+  height: 342px;
+  margin: 48px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.review_container .review_clients .review {
+  width: 540px;
+  height: 304px;
+}
+.review_container .review_clients .review .review_message {
+  width: 540px;
+  height: 220px;
+  position: relative;
+  text-align: center;
+  padding: 32px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px 0px rgba(41, 41, 42, 0.07);
+}
+.review_container .review_clients .review .review_message svg {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  z-index: -1;
+}
+.review_container .review_clients .review .review_message h3 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.review_container .review_clients .review .review_message p {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.review_container .review_clients .review .review_avatar {
+  height: 56px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+.review_container .review_clients .review .review_avatar img {
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.review_container .review_clients .review .review_avatar .review_name {
+  display: inline-block;
+}
+.review_container .review_clients .review .review_avatar .review_name h4 {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+}
+.review_container .review_clients .review .review_avatar .review_name p {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.review_container .review_clients .slider_dot {
+  position: absolute;
+  width: 54px;
+  height: 10px;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: space-between;
+}
+.review_container .review_clients .slider_dot .slider_circles {
+  width: 10px;
+  height: 10px;
+  opacity: 50%;
+  border: 2px solid rgb(104, 94, 214);
+  border-radius: 50%;
+  padding: 0%;
+}
+.review_container .review_clients .slider_dot .slider_circles:active {
+  background: rgb(104, 94, 214);
+  opacity: 100%;
+}
+
+.form_add_tg {
+  height: 468px;
+  position: relative;
+}
+.form_add_tg form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1110px;
+  height: 288px;
+  background: #685ed6;
+  border-radius: 6px;
+}
+.form_add_tg form svg {
+  position: absolute;
+  left: 86px;
+  bottom: 0;
+}
+.form_add_tg form .email_cont {
+  position: absolute;
+  top: 48px;
+  right: 187px;
+  width: 445px;
+  height: 166px;
+}
+.form_add_tg form .email_cont label {
+  font-family: Gilroy;
+  font-size: 33px;
+  font-weight: 800;
+  line-height: 41px;
+  text-align: left;
+  color: white;
+}
+.form_add_tg form .email_cont #email {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 248px;
+  height: 52px;
+  padding: 14px 16px 14px 16px;
+  box-sizing: border-box;
+  border: none;
+  gap: 10%;
+  border-radius: 5px 0px 0px 5px;
+  opacity: 0px;
+}
+.form_add_tg form .email_cont button {
+  position: absolute;
+  bottom: 2px;
+  right: 77px;
+  width: 120px;
+  height: 48px;
+  padding: 14px 24px 14px 24px;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  opacity: 0px;
+  box-sizing: border-box;
+  background: #18191f;
+  color: white;
+  border: none;
+}
+
+footer {
+  height: 520px;
+  background: #1d2530;
+  position: relative;
+}
+footer .tocha_footer {
+  position: absolute;
+  top: 111px;
+  left: 7%;
+  width: 87px;
+  height: 93px;
+}
+footer .tocha_footer span {
+  color: white;
+  font-family: Gilroy;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+footer .footer_links_container {
+  width: 54%;
+  height: 266px;
+  position: absolute;
+  top: 104px;
+  left: 44%;
+  display: grid;
+  grid-template-columns: 191px 1fr 191px 2fr;
+  grid-template-rows: 1;
+}
+footer .footer_links_container .footer_links h2 {
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: rgb(244, 245, 247);
+}
+footer .footer_links_container .footer_links ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+footer .footer_links_container .footer_links ul li {
+  margin-top: 12px;
+}
+footer .footer_links_container .footer_links ul li a {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: rgb(238, 239, 244);
+  text-decoration: none;
+}
+footer .footer_links_container .footer_links ul li a:hover {
+  border-bottom: solid;
 }/*# sourceMappingURL=style.css.map */
