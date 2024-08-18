@@ -2,6 +2,12 @@
   --custom-white: rgba(242, 247, 255, 0.5);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 p:hover,
 h1:hover,
 h2:hover,
@@ -1239,7 +1245,7 @@ footer .copyright span {
     height: 291px;
   }
   .review_container {
-    overflow: visible;
+    max-width: 100vw;
   }
   .review_container h2 {
     padding-top: 60px;
@@ -1251,6 +1257,10 @@ footer .copyright span {
     right: 5%;
     transform: scale(0.78);
     transform-origin: left top;
+  }
+  .review_container .review_clients {
+    position: absolute;
+    left: 40px;
   }
   .form_add_tg {
     height: 396px;

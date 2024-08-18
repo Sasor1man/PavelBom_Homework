@@ -2,6 +2,12 @@
     --custom-white: rgba(242, 247, 255, 0.5);
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 p,
 h1,
 h2,
@@ -1277,7 +1283,7 @@ footer {
         }
     }
     .review_container {
-        overflow: visible;
+        max-width: 100vw;
         h2 {
             padding-top: 60px;
             display: inline-block;
@@ -1290,6 +1296,8 @@ footer {
             transform-origin: left top;
         }
         .review_clients {
+            position: absolute;
+            left: 40px;
         }
     }
     .form_add_tg {
