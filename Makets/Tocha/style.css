@@ -524,6 +524,7 @@ header .tocha_div span {
 .description .positive {
   position: relative;
   width: 552px;
+  z-index: 1;
 }
 .description .positive h2 {
   position: absolute;
@@ -563,17 +564,20 @@ header .tocha_div span {
   width: 411.46px;
   height: 666.58px;
   position: relative;
-  top: 70px;
+  top: 60px;
+  z-index: 2;
 }
 .description .description_phone svg {
   float: right;
 }
 .description .description_phone .screen {
   height: 492px;
+  width: 380px;
   position: absolute;
   top: 113px;
   right: 25px;
   overflow-y: hidden;
+  z-index: 3;
 }
 .description .description_phone .screen .messages {
   position: relative;
@@ -584,7 +588,7 @@ header .tocha_div span {
   background: #effcde;
   border-radius: 0px 5px 5px 5px;
   box-shadow: 0px 4px 10px 0px rgba(142, 142, 147, 0.25);
-  margin-right: 49.37px;
+  right: 49.37px;
   padding: 8px 29px 7px 11px;
 }
 .description .description_phone .screen .messages:nth-of-type(odd) p {
@@ -597,8 +601,8 @@ header .tocha_div span {
   background: #f5f7f8;
   border-radius: 4px 0px 4px 4px;
   box-shadow: 0px 0.8px 0.8px 0px rgba(0, 0, 0, 0.25);
-  margin-right: 10.37px;
-  max-width: 233px;
+  right: 10.37px;
+  max-width: 265px;
   padding: 4px 25px 5px 9px;
 }
 .description .description_phone .screen .messages:nth-of-type(even) p {
@@ -1145,6 +1149,7 @@ footer .copyright span {
   .description .description_phone {
     transform: scale(0.731);
     transform-origin: top center;
+    top: 50px;
   }
   .tarifs_container {
     height: 641px;
