@@ -27,7 +27,6 @@ body {
     line-height: 24px;
     color: #1d2530;
     background-color: var(--custom-white);
-    // overflow-x: hidden;
 }
 h2 {
     font-family: Gilroy;
@@ -853,6 +852,8 @@ header {
     background: var(--custom-white);
     height: 555px;
     position: relative;
+    max-width: 100vw;
+    overflow: hidden;
     h2 {
         padding-top: 17px;
     }
@@ -862,7 +863,7 @@ header {
         top: 0;
     }
     .review_clients {
-        width: 1110px;
+        width: 1674px;
         height: 342px;
         margin: 48px auto;
         display: flex;
@@ -1076,6 +1077,14 @@ footer {
     }
 }
 
+@media screen and (max-width: 1740px) {
+    .review_container {
+        .review_clients {
+            margin-left: 40px;
+        }
+    }
+}
+
 @media screen and (max-width: 1360px) {
     h2 {
         font-family: Gilroy;
@@ -1179,6 +1188,7 @@ footer {
     }
     .tarifs_container {
         height: 641px;
+        overflow: hidden;
         .tarifs_info {
             align-items: center;
             h3 {
@@ -1283,7 +1293,6 @@ footer {
         }
     }
     .review_container {
-        max-width: 100vw;
         h2 {
             padding-top: 60px;
             display: inline-block;
@@ -1294,10 +1303,6 @@ footer {
             right: 5%;
             transform: scale(0.78);
             transform-origin: left top;
-        }
-        .review_clients {
-            position: absolute;
-            left: 40px;
         }
     }
     .form_add_tg {
@@ -1341,7 +1346,7 @@ footer {
         }
     }
 
-    @media screen and (max-width: 1084px) {
+    @media screen and (max-width: 1152px) {
         .tarifs_container {
             .tarifs_info {
                 .tarif_slide {
@@ -1352,6 +1357,11 @@ footer {
                     margin-top: 24px;
                     transform: translate(0, 0);
                 }
+            }
+        }
+        .review_container {
+            .review_clients {
+                margin-left: 20px;
             }
         }
     }
