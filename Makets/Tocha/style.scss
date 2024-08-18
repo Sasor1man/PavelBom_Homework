@@ -21,6 +21,7 @@ body {
     line-height: 24px;
     color: #1d2530;
     background-color: var(--custom-white);
+    // overflow-x: hidden;
 }
 h2 {
     font-family: Gilroy;
@@ -30,10 +31,27 @@ h2 {
     text-align: center;
 }
 
-header {
+.slider_dot {
+    position: absolute;
+    width: 54px;
+    height: 10px;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%, 0%);
     display: flex;
     justify-content: space-between;
-    padding: 44px 12% 0;
+    .slider_circles {
+        width: 10px;
+        height: 10px;
+        opacity: 50%;
+        border: 2px solid rgba(104, 94, 214, 1);
+        border-radius: 50%;
+        padding: 0%;
+        &:active {
+            background: rgba(104, 94, 214, 1);
+            opacity: 100%;
+        }
+    }
 }
 
 .purple_button {
@@ -58,43 +76,88 @@ header {
     }
 }
 
-.menu_itm {
-    width: 540px;
-    height: 26px;
-    display: flex;
-    justify-content: space-between;
+.pink_button {
+    border: none;
+    width: 177px;
+    height: 40px;
+    gap: 14px;
+    border-radius: 6px;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    background: rgba(241, 228, 255, 1);
+    color: rgba(104, 94, 214, 1);
 
-    li {
-        &:first-child {
-            font-weight: 700;
-            color: #685ed6;
-        }
-        a {
-            text-decoration: none;
-            &:hover {
-                border-bottom: solid;
-            }
-            &:active {
-                color: #685ed6;
-            }
-        }
+    &:hover {
+        background: rgba(195, 155, 251, 1);
+    }
+    &:active {
+        background: rgba(104, 94, 214, 1);
+        color: white;
     }
 }
 
-.tocha_div {
-    font-weight: 700;
-    color: rgba(29, 37, 48, 1);
-    .tocha_img {
-        width: 55px;
-        height: 39.63px;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 44px 12% 0;
+    .menu_itm {
+        width: 540px;
+        height: 26px;
+        display: flex;
+        justify-content: space-between;
+        display: none;
+        li {
+            &:first-child {
+                font-weight: 700;
+                color: #685ed6;
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    border-bottom: solid;
+                }
+                &:active {
+                    color: #685ed6;
+                }
+            }
+        }
     }
-    span {
-        font-size: 28.11px;
+    .login {
+        width: 226px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        .pink_button {
+            width: 76px;
+        }
+        .purple_button {
+            width: 138px;
+            padding: 10px 20px 10px 20px;
+            font-family: Gilroy;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+    .tocha_div {
         font-weight: 700;
-        line-height: 21.08px;
-        text-align: left;
-        width: 76px;
-        height: 22px;
+        color: rgba(29, 37, 48, 1);
+        .tocha_img {
+            width: 55px;
+            height: 39.63px;
+        }
+        span {
+            font-size: 28.11px;
+            font-weight: 700;
+            line-height: 21.08px;
+            text-align: left;
+            width: 76px;
+            height: 22px;
+        }
     }
 }
 
@@ -650,6 +713,9 @@ header {
                 }
             }
         }
+        .slider_dot {
+            display: none;
+        }
     }
 }
 
@@ -712,7 +778,7 @@ header {
 
             .blue_left_back {
                 position: absolute;
-                left: -69.54px;
+                left: -24.54px;
                 bottom: 44.11px;
                 transform: translate(0%, -100%);
             }
@@ -726,11 +792,7 @@ header {
                 left: -24px;
                 bottom: 231.07px;
             }
-            .blue_left_back {
-                position: absolute;
-                left: -24px;
-                bottom: 231.07px;
-            }
+
             .purple_right_back {
                 position: absolute;
                 left: -23px;
@@ -861,28 +923,6 @@ header {
                 }
             }
         }
-        .slider_dot {
-            position: absolute;
-            width: 54px;
-            height: 10px;
-            bottom: 80px;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            display: flex;
-            justify-content: space-between;
-            .slider_circles {
-                width: 10px;
-                height: 10px;
-                opacity: 50%;
-                border: 2px solid rgba(104, 94, 214, 1);
-                border-radius: 50%;
-                padding: 0%;
-                &:active {
-                    background: rgba(104, 94, 214, 1);
-                    opacity: 100%;
-                }
-            }
-        }
     }
 }
 
@@ -1009,9 +1049,36 @@ footer {
             }
         }
     }
+    .copyright {
+        height: 72px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: #141b23;
+        span {
+            font-family: Gilroy;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: rgba(217, 219, 225, 1);
+            position: absolute;
+            top: 50%;
+            left: 11%;
+            transform: translate(0, -50%);
+        }
+    }
 }
 
 @media screen and (max-width: 1360px) {
+    h2 {
+        font-family: Gilroy;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 40px;
+        text-align: center;
+    }
+
     header {
         padding: 32px 5% 0;
         .menu_itm {
@@ -1064,8 +1131,10 @@ footer {
     }
     .description {
         height: 607px;
+
         .positive {
             width: 390px;
+            margin-left: 50px;
             h2 {
                 font-family: Gilroy;
                 font-size: 32px;
@@ -1099,7 +1168,183 @@ footer {
         }
         .description_phone {
             transform: scale(0.731);
-            transform-origin: top left;
+            transform-origin: top center;
+        }
+    }
+    .tarifs_container {
+        height: 641px;
+        .tarifs_info {
+            align-items: center;
+            h3 {
+                font-family: Gilroy;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 28px;
+            }
+            .tarif_slide {
+                width: 1031px;
+                .tarif {
+                    width: 330px;
+                    div:first-child {
+                        background: #f4f6fd;
+                        height: 61px;
+                        border-radius: 6px 6px 0px 0px;
+                        p {
+                            font-family: Gilroy;
+                            font-size: 24px;
+                            font-weight: 800;
+                            line-height: 48px;
+                            text-align: center;
+                            color: rgba(104, 94, 214, 1);
+                        }
+                    }
+                    div:last-child {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        height: calc(100% - 61px);
+                        h4 {
+                            font-family: Gilroy;
+                            font-size: 28px;
+                            font-weight: 700;
+                            line-height: 40px;
+                            text-align: center;
+                            width: 255px;
+                        }
+                        p {
+                            font-family: Gilroy;
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 30px;
+                            text-align: center;
+                        }
+                        button {
+                            width: 287px;
+                            height: Hug (48px) px;
+                            padding: 12px 32px 12px 32px;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .instruction_container {
+        height: 808px;
+        h2 {
+            max-width: 491px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        .instruction {
+            margin-top: 16px;
+            .plane {
+                min-width: 0;
+                svg {
+                    display: none;
+                }
+            }
+            .step {
+                width: 208px;
+                &:nth-of-type(4) {
+                    margin-top: 16px;
+                }
+                #instruction_phone_1 {
+                    transform: scale(0.89);
+                    transform-origin: top;
+                }
+                #instruction_phone_2 {
+                    transform: scale(0.75);
+                    transform-origin: top;
+                }
+                #instruction_phone_3 {
+                    transform: scale(0.9);
+                    transform-origin: top;
+                }
+                .blue_left_back,
+                .blue_center_back,
+                .purple_center_back,
+                .purple_right_back {
+                    transform: scale(0.54);
+                    transform-origin: top;
+                }
+            }
+        }
+        .custom_white {
+            height: 291px;
+        }
+    }
+    .review_container {
+        overflow: visible;
+        h2 {
+            padding-top: 60px;
+            display: inline-block;
+            position: relative;
+            left: 27%;
+        }
+        #quotes {
+            right: 5%;
+            transform: scale(0.78);
+            transform-origin: left top;
+        }
+        .review_clients {
+        }
+    }
+    .form_add_tg {
+        height: 396px;
+        form {
+            width: 688px;
+            svg {
+                left: 32px;
+            }
+            .email_cont {
+                width: 330px;
+                height: 148px;
+                top: 49px;
+                left: 329px;
+                gap: 32px;
+                label {
+                    font-family: Gilroy;
+                    font-size: 24px;
+                    font-weight: 800;
+                    line-height: 32px;
+                    text-align: left;
+                }
+                #email {
+                    width: 210px;
+                }
+                button {
+                    right: 0;
+                }
+            }
+        }
+    }
+    footer {
+        height: 460px;
+        .footer_links_container {
+            top: 60px;
+        }
+        .copyright {
+            span {
+                left: 40px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1084px) {
+        .tarifs_container {
+            .tarifs_info {
+                .tarif_slide {
+                }
+                .slider_dot {
+                    position: static;
+                    display: flex;
+                    margin-top: 24px;
+                    transform: translate(0, 0);
+                }
+            }
         }
     }
 }

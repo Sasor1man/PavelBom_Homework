@@ -29,10 +29,27 @@ h2 {
   text-align: center;
 }
 
-header {
+.slider_dot {
+  position: absolute;
+  width: 54px;
+  height: 10px;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%, 0%);
   display: flex;
   justify-content: space-between;
-  padding: 44px 12% 0;
+}
+.slider_dot .slider_circles {
+  width: 10px;
+  height: 10px;
+  opacity: 50%;
+  border: 2px solid rgb(104, 94, 214);
+  border-radius: 50%;
+  padding: 0%;
+}
+.slider_dot .slider_circles:active {
+  background: rgb(104, 94, 214);
+  opacity: 100%;
 }
 
 .purple_button {
@@ -56,35 +73,80 @@ header {
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.14);
 }
 
-.menu_itm {
+.pink_button {
+  border: none;
+  width: 177px;
+  height: 40px;
+  gap: 14px;
+  border-radius: 6px;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  background: rgb(241, 228, 255);
+  color: rgb(104, 94, 214);
+}
+.pink_button:hover {
+  background: rgb(195, 155, 251);
+}
+.pink_button:active {
+  background: rgb(104, 94, 214);
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 44px 12% 0;
+}
+header .menu_itm {
   width: 540px;
   height: 26px;
   display: flex;
   justify-content: space-between;
+  display: none;
 }
-.menu_itm li:first-child {
+header .menu_itm li:first-child {
   font-weight: 700;
   color: #685ed6;
 }
-.menu_itm li a {
+header .menu_itm li a {
   text-decoration: none;
 }
-.menu_itm li a:hover {
+header .menu_itm li a:hover {
   border-bottom: solid;
 }
-.menu_itm li a:active {
+header .menu_itm li a:active {
   color: #685ed6;
 }
-
-.tocha_div {
+header .login {
+  width: 226px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+header .login .pink_button {
+  width: 76px;
+}
+header .login .purple_button {
+  width: 138px;
+  padding: 10px 20px 10px 20px;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+header .tocha_div {
   font-weight: 700;
   color: rgb(29, 37, 48);
 }
-.tocha_div .tocha_img {
+header .tocha_div .tocha_img {
   width: 55px;
   height: 39.63px;
 }
-.tocha_div span {
+header .tocha_div span {
   font-size: 28.11px;
   font-weight: 700;
   line-height: 21.08px;
@@ -630,6 +692,9 @@ header {
   padding: 12px 32px 12px 32px;
   gap: 10px;
 }
+.tarifs_container .tarifs_info .slider_dot {
+  display: none;
+}
 
 .instruction_container {
   background-color: white;
@@ -692,7 +757,7 @@ header {
 }
 .instruction_container .instruction .step .blue_left_back {
   position: absolute;
-  left: -69.54px;
+  left: -24.54px;
   bottom: 44.11px;
   transform: translate(0%, -100%);
 }
@@ -702,11 +767,6 @@ header {
   bottom: 39.77px;
 }
 .instruction_container .instruction .step .purple_center_back {
-  position: absolute;
-  left: -24px;
-  bottom: 231.07px;
-}
-.instruction_container .instruction .step .blue_left_back {
   position: absolute;
   left: -24px;
   bottom: 231.07px;
@@ -837,28 +897,6 @@ header {
   line-height: 24px;
   text-align: left;
 }
-.review_container .review_clients .slider_dot {
-  position: absolute;
-  width: 54px;
-  height: 10px;
-  bottom: 80px;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  display: flex;
-  justify-content: space-between;
-}
-.review_container .review_clients .slider_dot .slider_circles {
-  width: 10px;
-  height: 10px;
-  opacity: 50%;
-  border: 2px solid rgb(104, 94, 214);
-  border-radius: 50%;
-  padding: 0%;
-}
-.review_container .review_clients .slider_dot .slider_circles:active {
-  background: rgb(104, 94, 214);
-  opacity: 100%;
-}
 
 .form_add_tg {
   height: 468px;
@@ -982,8 +1020,34 @@ footer .footer_links_container .footer_links ul li a {
 footer .footer_links_container .footer_links ul li a:hover {
   border-bottom: solid;
 }
+footer .copyright {
+  height: 72px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #141b23;
+}
+footer .copyright span {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgb(217, 219, 225);
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  transform: translate(0, -50%);
+}
 
 @media screen and (max-width: 1360px) {
+  h2 {
+    font-family: Gilroy;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    text-align: center;
+  }
   header {
     padding: 32px 5% 0;
   }
@@ -1037,6 +1101,7 @@ footer .footer_links_container .footer_links ul li a:hover {
   }
   .description .positive {
     width: 390px;
+    margin-left: 50px;
   }
   .description .positive h2 {
     font-family: Gilroy;
@@ -1066,6 +1131,171 @@ footer .footer_links_container .footer_links ul li a:hover {
   }
   .description .description_phone {
     transform: scale(0.731);
-    transform-origin: top left;
+    transform-origin: top center;
+  }
+  .tarifs_container {
+    height: 641px;
+  }
+  .tarifs_container .tarifs_info {
+    align-items: center;
+  }
+  .tarifs_container .tarifs_info h3 {
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  .tarifs_container .tarifs_info .tarif_slide {
+    width: 1031px;
+  }
+  .tarifs_container .tarifs_info .tarif_slide .tarif {
+    width: 330px;
+  }
+  .tarifs_container .tarifs_info .tarif_slide .tarif div:first-child {
+    background: #f4f6fd;
+    height: 61px;
+    border-radius: 6px 6px 0px 0px;
+  }
+  .tarifs_container .tarifs_info .tarif_slide .tarif div:first-child p {
+    font-family: Gilroy;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 48px;
+    text-align: center;
+    color: rgb(104, 94, 214);
+  }
+  .tarifs_container .tarifs_info .tarif_slide .tarif div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100% - 61px);
+  }
+  .tarifs_container .tarifs_info .tarif_slide .tarif div:last-child h4 {
+    font-family: Gilroy;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    width: 255px;
+  }
+  .tarifs_container .tarifs_info .tarif_slide .tarif div:last-child p {
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+  }
+  .tarifs_container .tarifs_info .tarif_slide .tarif div:last-child button {
+    width: 287px;
+    height: Hug 48px px;
+    padding: 12px 32px 12px 32px;
+    gap: 10px;
+  }
+  .instruction_container {
+    height: 808px;
+  }
+  .instruction_container h2 {
+    max-width: 491px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .instruction_container .instruction {
+    margin-top: 16px;
+  }
+  .instruction_container .instruction .plane {
+    min-width: 0;
+  }
+  .instruction_container .instruction .plane svg {
+    display: none;
+  }
+  .instruction_container .instruction .step {
+    width: 208px;
+  }
+  .instruction_container .instruction .step:nth-of-type(4) {
+    margin-top: 16px;
+  }
+  .instruction_container .instruction .step #instruction_phone_1 {
+    transform: scale(0.89);
+    transform-origin: top;
+  }
+  .instruction_container .instruction .step #instruction_phone_2 {
+    transform: scale(0.75);
+    transform-origin: top;
+  }
+  .instruction_container .instruction .step #instruction_phone_3 {
+    transform: scale(0.9);
+    transform-origin: top;
+  }
+  .instruction_container .instruction .step .blue_left_back,
+  .instruction_container .instruction .step .blue_center_back,
+  .instruction_container .instruction .step .purple_center_back,
+  .instruction_container .instruction .step .purple_right_back {
+    transform: scale(0.54);
+    transform-origin: top;
+  }
+  .instruction_container .custom_white {
+    height: 291px;
+  }
+  .review_container {
+    overflow: visible;
+  }
+  .review_container h2 {
+    padding-top: 60px;
+    display: inline-block;
+    position: relative;
+    left: 27%;
+  }
+  .review_container #quotes {
+    right: 5%;
+    transform: scale(0.78);
+    transform-origin: left top;
+  }
+  .form_add_tg {
+    height: 396px;
+  }
+  .form_add_tg form {
+    width: 688px;
+  }
+  .form_add_tg form svg {
+    left: 32px;
+  }
+  .form_add_tg form .email_cont {
+    width: 330px;
+    height: 148px;
+    top: 49px;
+    left: 329px;
+    gap: 32px;
+  }
+  .form_add_tg form .email_cont label {
+    font-family: Gilroy;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    text-align: left;
+  }
+  .form_add_tg form .email_cont #email {
+    width: 210px;
+  }
+  .form_add_tg form .email_cont button {
+    right: 0;
+  }
+  footer {
+    height: 460px;
+  }
+  footer .footer_links_container {
+    top: 60px;
+  }
+  footer .copyright span {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 1360px) and (max-width: 1084px) {
+  .tarifs_container .tarifs_info .slider_dot {
+    position: static;
+    display: flex;
+    margin-top: 24px;
+    transform: translate(0, 0);
   }
 }/*# sourceMappingURL=style.css.map */
