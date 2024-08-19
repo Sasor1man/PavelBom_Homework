@@ -1435,6 +1435,7 @@ footer .copyright span {
     width: 237px;
     height: 286px;
     background: #f8fbff;
+    display: none;
   }
   header .login {
     flex-direction: column;
