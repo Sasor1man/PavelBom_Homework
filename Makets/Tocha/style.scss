@@ -104,6 +104,80 @@ h2 {
     }
 }
 
+.enter-register {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 10;
+    .blanks {
+        width: 480px;
+        height: 502px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h2 {
+            font-family: Gilroy;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 32px;
+            text-align: left;
+            color: rgba(104, 94, 214, 1);
+            margin-top: 105px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            input {
+                height: 40px;
+                width: 340px;
+                height: 40px;
+                padding: 16px 20px 16px 20px;
+                gap: 10px;
+                border-radius: 4px;
+                opacity: 0px;
+                border: none;
+                background-color: var(--custom-white);
+                margin-bottom: 10px;
+            }
+        }
+        button {
+            width: 340px;
+            height: 48px;
+        }
+        svg {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            cursor: pointer;
+        }
+    }
+}
+
+#enterance {
+    form {
+        width: 340px;
+        height: 114px;
+        justify-content: flex-start;
+    }
+    top: -1000px;
+}
+
+#register {
+    top: -1000px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -1404,7 +1478,15 @@ footer {
                     header {
                         .login,
                         .menu_itm {
-                            display: none;
+                            position: absolute;
+                            width: 237px;
+                            height: 286px;
+                            background: #f8fbff;
+                        }
+                        .login {
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
                         }
                         .menu_burger {
                             display: block;

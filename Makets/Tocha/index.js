@@ -73,5 +73,64 @@ review.innerHTML = revieMessage
 
 
 
+const loginCont = document.getElementById('enterance');
+const registerCont = document.getElementById('register');
+const menu = document.getElementById('menu_itm');
+const loginButton = document.getElementById('login_button');
+const registerButton = document.getElementById('register_button');
+const registBackground = document.getElementById('enter-register');
+const loginnedButton1 = document.getElementById('login1');
+const loginnedButton2 = document.getElementById('login2');
+const logregdiv = document.getElementById('login');
+const cross1 = document.getElementById('x1');
+const cross2 = document.getElementById('x2');
+const exit = document.getElementById('exit');
 
 
+function backAppear() {
+    registBackground.style.display = 'block';
+
+}
+
+function movedown(element) {
+    element.style.top = '50%';
+}
+
+function loginned() {
+    registBackground.style.display = 'none';
+    logregdiv.style.display = 'none';
+    menu.style.display = 'flex';
+}
+
+function unlog() {
+    registBackground.style.display = 'none';
+}
+
+loginButton.onclick = function () {
+    backAppear();
+    movedown(loginCont);
+}
+
+registerButton.onclick = function () {
+    backAppear();
+    movedown(registerCont);
+}
+
+loginnedButton1.onclick = function () {
+    loginned()
+}
+
+loginnedButton2.onclick = function () {
+    loginned();
+}
+
+cross1.onclick = function () {
+    unlog();
+}
+cross2.onclick = function () {
+    unlog();
+}
+
+exit.onclick = function () {
+    unlog();
+}
