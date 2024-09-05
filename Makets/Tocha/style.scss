@@ -5,7 +5,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 p,
@@ -1476,18 +1476,32 @@ footer {
                 }
                 @media screen and (max-width: 700px) {
                     header {
+                        position: relative;
                         .login,
                         .menu_itm {
                             position: absolute;
                             width: 237px;
                             height: 286px;
                             background: #f8fbff;
-                            display: none;
                         }
                         .login {
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
+                            background-color: white;
+                            position: fixed;
+                            top: 30%;
+                            left: 1050%;
+                            transform: translate(-50%, 0);
+                            z-index: 10;
+                            li {
+                                
+                                margin-bottom: 11px;
+                                .pink_button, .purple_button {
+                                    width: 177px;
+                                    height: 40px;
+                                }
+                            }
                         }
                         .menu_burger {
                             display: block;

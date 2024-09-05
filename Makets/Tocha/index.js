@@ -85,6 +85,7 @@ const logregdiv = document.getElementById('login');
 const cross1 = document.getElementById('x1');
 const cross2 = document.getElementById('x2');
 const exit = document.getElementById('exit');
+const burger = document.getElementById('burger');
 
 
 function backAppear() {
@@ -95,6 +96,12 @@ function backAppear() {
 function movedown(element) {
     element.style.top = '50%';
 }
+
+function moveleft(element) {
+    element.style.left = '50%';
+}
+
+
 
 function loginned() {
     registBackground.style.display = 'none';
@@ -134,3 +141,11 @@ cross2.onclick = function () {
 exit.onclick = function () {
     unlog();
 }
+
+burger.onclick = function() {
+    backAppear();
+    moveleft(logregdiv);
+}
+
+
+
