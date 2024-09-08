@@ -200,6 +200,9 @@ header .menu_itm li a:hover {
 header .menu_itm li a:active {
   color: #685ed6;
 }
+header .menu_itm .cross {
+  display: none;
+}
 header .login {
   width: 226px;
   height: 40px;
@@ -217,6 +220,9 @@ header .login .purple_button {
   font-weight: 700;
   line-height: 20px;
   text-align: center;
+}
+header .login .cross {
+  display: none;
 }
 header .tocha_div {
   font-weight: 700;
@@ -1429,6 +1435,9 @@ footer .copyright span {
   }
 }
 @media screen and (max-width: 1360px) and (max-width: 1152px) and (max-width: 820px) and (max-width: 755px) and (max-width: 700px) {
+  .enter-register .blanks {
+    z-index: 12;
+  }
   header {
     position: relative;
   }
@@ -1438,8 +1447,6 @@ footer .copyright span {
     width: 237px;
     height: 286px;
     background: #f8fbff;
-  }
-  header .login {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1450,10 +1457,18 @@ footer .copyright span {
     transform: translate(-50%, 0);
     z-index: 10;
   }
+  header .login .cross,
+  header .menu_itm .cross {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
   header .login li {
     margin-bottom: 11px;
   }
-  header .login li .pink_button, header .login li .purple_button {
+  header .login li .pink_button,
+  header .login li .purple_button {
     width: 177px;
     height: 40px;
   }

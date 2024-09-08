@@ -76,21 +76,23 @@ review.innerHTML = revieMessage
 const loginCont = document.getElementById('enterance');
 const registerCont = document.getElementById('register');
 const menu = document.getElementById('menu_itm');
-const loginButton = document.getElementById('login_button');
 const registerButton = document.getElementById('register_button');
 const registBackground = document.getElementById('enter-register');
-const loginnedButton1 = document.getElementById('login1');
-const loginnedButton2 = document.getElementById('login2');
+const loginButton = document.getElementById('login_button');
 const logregdiv = document.getElementById('login');
-const cross1 = document.getElementById('x1');
-const cross2 = document.getElementById('x2');
+const enteranceButton = document.getElementsByClassName('enterance_button')
 const exit = document.getElementById('exit');
 const burger = document.getElementById('burger');
+const crosses = document.getElementsByClassName('cross');
+let isLoggined = false;
 
 
 function backAppear() {
     registBackground.style.display = 'block';
+}
 
+function backDisappear() {
+    registBackground.style.display = 'none';
 }
 
 function movedown(element) {
@@ -101,50 +103,76 @@ function moveleft(element) {
     element.style.left = '50%';
 }
 
+function returnBack(element) {
+    element.style.removeProperty('left');
+    element.style.removeProperty('top');
+}
+
+function removeLoreg() {
+    returnBack(logregdiv);
+        returnBack(loginCont);
+        returnBack(registerCont);
+        returnBack(menu);
+}
 
 
 function loginned() {
-    registBackground.style.display = 'none';
+    backDisappear();
     logregdiv.style.display = 'none';
     menu.style.display = 'flex';
+    isLoggined = true;
 }
 
 function unlog() {
-    registBackground.style.display = 'none';
+    isLoggined = false;
 }
+
+
 
 loginButton.onclick = function () {
     backAppear();
     movedown(loginCont);
+    if (window.innerWidth <= 700) {
+        returnBack(logregdiv);
+    }
 }
 
 registerButton.onclick = function () {
     backAppear();
     movedown(registerCont);
+    if (window.innerWidth <= 700) {
+        returnBack(logregdiv);
+    }
 }
 
-loginnedButton1.onclick = function () {
-    loginned()
+for (let i = 0; i < enteranceButton.length; i++) {
+    enteranceButton[i].onclick = function () {
+        loginned();
+        removeLoreg();
+    }
 }
 
-loginnedButton2.onclick = function () {
-    loginned();
-}
 
-cross1.onclick = function () {
-    unlog();
-}
-cross2.onclick = function () {
-    unlog();
+
+for (let i = 0; i < crosses.length; i++) {
+    crosses[i].onclick = function () {
+        removeLoreg();
+        backDisappear(); 
+    }
 }
 
 exit.onclick = function () {
     unlog();
 }
 
-burger.onclick = function() {
-    backAppear();
-    moveleft(logregdiv);
+burger.onclick = function () {
+    if (isLoggined) {
+        backAppear();
+        moveleft(menu);
+    } else {
+        backAppear();
+        moveleft(logregdiv);
+    }
 }
 
 
