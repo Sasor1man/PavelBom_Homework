@@ -7,37 +7,40 @@ function checkForNumber(word) {
 
 function checkForLetter(word) {
     if (word == '' || word == '.') return false;
-    let letter = true;
     for (let i = 0; i < word.length; i++) {
-        if (word[i] == Number(word[i])) letter = false;
+        if (word[i] == Number(word[i])) return false;
     }
-    if (!letter) return false;
-    else return true;
+    return true;
 }
 
 
 
-var namE = prompt('Введите ваше имя');
+let namE = prompt('Введите ваше имя');
 
 while (!checkForLetter(namE)) {
     namE = prompt('Введите корректое имя');
 }
 
-var surname = prompt('Введите ваше фамилию');
+let surname = prompt('Введите ваше фамилию');
 
 while (!checkForLetter(surname)) {
     surname = prompt('Введите корректную фамилию')
 }
 
-var patronymic = prompt('Введите ваше отчество');
-var age = prompt('Введите ваш возраст');
+let patronymic = prompt('Введите ваше отчество');
+
+while (!checkForLetter(patronymic)) {
+    patronymic = prompt('Введите корректое отчество')
+}
+
+let age = prompt('Введите ваш возраст');
 
 
 while (!checkForNumber(age)) {
     age = prompt('Введите корректый возраст');
 }
 
-var gender = confirm('Ваш пол мужской?');
+let gender = confirm('Ваш пол мужской?');
 
 if (gender) {
     gender = 'мужской';
