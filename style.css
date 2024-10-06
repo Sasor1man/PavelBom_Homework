@@ -1,15 +1,75 @@
+:root {
+  --cyberpunk-darkblue: rgba(9, 24, 51);
+  --cyberpunk-blue: rgba(19, 62, 124);
+  --cyberpunk-lightblue: rgba(10, 189, 198);
+  --cyberpunk-pink: rgba(234, 0, 217);
+  --cyberpunk-purple: rgba(113, 28, 145);
+  --cyberpunk-red: rgba(255, 0, 141);
+  --cyberpunk-lightblue-2: rgb(44, 0, 116);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cyberpunk-darkblue);
+}
+
+a {
+  text-decoration: none;
+}
+
 h1 {
-    text-align: center;
+  text-align: center;
+  font-size: 35px;
+  padding: 20px;
 }
+
+h1,
 h2 {
-    margin-left: 25px;
+  color: var(--cyberpunk-red);
 }
-div p {
-    margin-left: 50px;
+
+h2 {
+  font-size: 30px;
+  text-align: center;
 }
-b {
-    color: red;
+
+.homework .list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
-i {
-    color: green;
+.homework .list a {
+  display: inline-block;
 }
+.homework .list a > div {
+  height: 100px;
+  width: 200px;
+  border-radius: 25px;
+  border: solid 2px var(--cyberpunk-blue);
+  padding: 10px;
+  color: var(--cyberpunk-purple);
+}
+.homework .list a > div h3,
+.homework .list a > div p {
+  text-align: center;
+}
+.homework .list a > div h3 {
+  font-size: 25px;
+}
+.homework .list a > div p {
+  margin-top: 15px;
+  font-size: 23px;
+}
+.homework .list a > div:hover {
+  border: var(--cyberpunk-lightblue) solid 2px;
+  color: var(--cyberpunk-pink);
+  background: var(--cyberpunk-lightblue-2);
+}/*# sourceMappingURL=style.css.map */
