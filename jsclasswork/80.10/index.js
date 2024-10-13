@@ -1,9 +1,9 @@
-let x;
-let y;
+let x = null;
+let y = null;
 let sign;
 
 function checkForNumber(word) {
-    if (word <= 0) return false;
+    if (word < 0) return false;
     if (Number(word) == word) {
         return true;
     } else return false;
@@ -18,9 +18,10 @@ function getValue(classArr) {
 }
 
 function rememberNum(value) {
-    if (!x) {
-        return x = Number(value);
-    } else return y = Number(value);
+    value = Number(value)
+    if (x === null) {
+        x = value;
+    } else y = value;
 }
 
 function getSign(_sign) {
