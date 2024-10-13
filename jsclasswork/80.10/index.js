@@ -3,7 +3,6 @@ let y = null;
 let sign;
 
 function checkForNumber(word) {
-    if (word < 0) return false;
     if (Number(word) == word) {
         return true;
     } else return false;
