@@ -1,6 +1,4 @@
-const returnCentury = year => {
-    return Math.ceil(year / 100)
-}
+const returnCentury = year => Math.ceil(year / 100);
 
 console.log(returnCentury(2000));
 console.log(returnCentury(2001));
