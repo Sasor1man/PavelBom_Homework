@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <button id="add">add</button>
-    <button id="delete">delete</button>
-    <button id="find">find</button>
-    <button id="list">list</button>
 
 
+
+
+    <span id="success">success</span>
+    <div class="a">
+        <form id="AddDrink">
+            <input type="text" name="drinkName" placeholder="Name">
+            <p>Alcoholic?</p>
+            <label><input type="radio" name="radio" value="Yes" checked>Yes</label>
+            <label><input type="radio" name="radio" value="No">No</label>
+            <input type="text" placeholder="Recipe">
+            <button id="add" type="button">add</button>
+        </form>
+        <form>
+            <input type="text" id="deleteDrink">
+            <button id="delete" type="button">delete</button>
+        </form>
+        <form>
+            <input type="text" id="findDrink">
+            <button id="find" type="button">find</button>
+            <div id="foundDrink"></div>
+        </form>
+        <form>
+            <button id="list" type="button">list</button>
+            <div id="drinkList"></div>
+        </form>
+    </div>
 
     <script src="DRINKS_HASH_FUNC.js"></script>
-    <script src="buttons.js"></script>
+    <script src="events.js"></script>
 </body>
+
 </html>

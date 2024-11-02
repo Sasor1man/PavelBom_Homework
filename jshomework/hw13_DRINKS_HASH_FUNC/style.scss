@@ -1,0 +1,21 @@
+.a {
+    display: flex;
+    flex-direction: column;
+    & > form {
+        border: 2px solid black;
+        & > input {
+            display: block;
+            margin: 10px;
+        }
+    }
+}
+
+span {
+    background-color: green;
+    color: white;
+    padding: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+}
