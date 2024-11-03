@@ -16,7 +16,7 @@ const unfound = div => {
         `
 }
 const removeP = div => {
-    const p = div.querySelector('p')
+    const p = div.querySelector('p');
     if (p) div.removeChild(p)
 }
 
