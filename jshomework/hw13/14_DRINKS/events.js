@@ -1,4 +1,5 @@
-const drinks = new DrinksHashFunc();
+// const drinks = new DrinksHashFunc();
+const drinks = new HashStorageClass();
 
 const successAppear = () => {
     success.style.display = 'inline-block';
