@@ -1,0 +1,1 @@
+const reverse = str => (typeof (str) === 'string' && str !== '') ? Array.from(str).reduceRight((accum, currentLetter) => accum += currentLetter) : str === '' ? '' : 0
