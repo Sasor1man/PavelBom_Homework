@@ -1,5 +1,5 @@
 const vowels = word => {
-    if (typeof(word) !== 'string') return 0;
+    if (typeof (word) !== 'string') return 0;
     let rusVowels = 'уеыаоэяию';
     let num = 0;
     rusVowels += rusVowels.toUpperCase();
