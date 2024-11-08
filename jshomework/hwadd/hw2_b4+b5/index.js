@@ -17,7 +17,7 @@ const buildWrapper = tag => (text, atribute) => {
     const translateString = str => Array.from(str).map((curLetter) => symbols.includes(curLetter) ? toUnicode(curLetter) : curLetter).join('');
     const atributeString = atribute => {
         let result = '';
-        for (key in atribute) {
+        for (let key in atribute) {
             result += ` ${key}='${atribute[key]}'`
         }
         return result
