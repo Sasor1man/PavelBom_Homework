@@ -26,50 +26,60 @@ const formDef2 =
         { caption: 'Зарегистрироваться', kind: 'submit' },
     ];
 
+class Input {
+    constructor(tag, type, maxLength, inputType = 'input') {
+        if (!type) type = 'text';
+        this.tagLabel = tag.label;
+        this.tagName = tag.name;
+        this.tagType = type;
+        if (maxLength) this.maxLength = maxLength;
+        this.div = document.createElement('div');
+        this.input = document.createElement(inputType);
+        this.label = document.createElement('label');
+    }
+
+
+    get divTag() {
+        this.label.innerText = this.tagLabel;
+        this.input.name = this.tagName;
+        if (this.inputType === 'input') this.input.type = this.tagType;
+        if (this.maxLength) this.input.maxLength = this.maxLength
+
+        this.div.appendChild(this.label);
+        this.div.appendChild(this.input);
+
+        return this.div
+    }
+
+}
+
 const createLongTextInput = tag => {
-    const longText = document.createElement('div');
-    const input = document.createElement('input');
-    const label = document.createElement('label');
-
-    label.innerText = tag.label;
-    input.name = tag.name;
-    input.type = 'text';
-
-    longText.appendChild(label);
-    longText.appendChild(input);
-
-    return longText
+    const longText = new Input(tag);
+    return longText.divTag
 }
 
 const createNumberInput = tag => {
-    const num = document.createElement('div');
-    const input = document.createElement('input');
-    const label = document.createElement('label');
-
-    label.innerText = tag.label;
-    input.name = tag.name;
-    input.type = 'number';
-
-    num.appendChild(label);
-    num.appendChild(input);
-
-    return num
+    const num = new Input(tag, 'number');
+    return num.divTag
 }
 
 const createShortTextInput = tag => {
-    const shortText = document.createElement('div');
-    const input = document.createElement('input');
-    const label = document.createElement('label');
+    const shortText = new Input(tag, 'text', 20);
+    return shortText.divTag
+}
 
-    label.innerText = `${tag.label}`;
-    input.name = tag.name;
-    input.type = 'text';
-    input.maxLength = 60;
+const createCheckbox = tag => {
+    const checkBox = new Input(tag, 'checkbox');
+    const checkDiv = checkBox.divTag;
+    checkDiv.className = 'check';
+    return checkDiv
+}
 
-    shortText.appendChild(label);
-    shortText.appendChild(input);
-
-    return shortText
+const createTextarea = tag => {
+    const textArea = new Input(tag, '', '', 'textarea');
+    const areaDiv = textArea.divTag;
+    areaDiv.className = 'text-area';
+    return areaDiv
 }
 
 const createSelect = tag => {
@@ -120,21 +130,6 @@ const createRadio = tag => {
 }
 
 
-const createCheckbox = tag => {
-    const checkDiv = document.createElement('div');
-    const checkbox = document.createElement('input');
-    const label = document.createElement('label');
-
-    label.innerText = tag.label;
-    checkbox.name = tag.name;
-    checkbox.type = 'checkbox';
-
-    checkDiv.appendChild(label);
-    checkDiv.appendChild(checkbox);
-    checkDiv.className = 'check'
-
-    return checkDiv
-}
 
 const createSubmit = tag => {
     const button = document.createElement('button');
@@ -144,20 +139,6 @@ const createSubmit = tag => {
     return button
 }
 
-const createTextarea = tag => {
-    const areaDiv = document.createElement('div');
-    const label = document.createElement('label');
-    const area = document.createElement('textarea');
-
-    area.name = tag.name;
-    label.innerText = tag.label;
-
-    areaDiv.appendChild(label);
-    areaDiv.appendChild(area);
-    areaDiv.className = 'text-area'
-
-    return areaDiv
-}
 
 const checkTag = tagObj => {
     switch (tagObj.kind) {
