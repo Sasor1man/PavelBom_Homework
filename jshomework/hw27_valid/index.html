@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="https://fe.it-academy.by/TestForm.php">
+        <div>
+            <label for="">Разработчики:</label>
+            <input type="text" name="developers">
+        </div>
+        <div>
+            <label for="">Название сайта:</label>
+            <input type="text" name="siteTitle">
+        </div>
+        <div>
+            <label for="">URL сайта:</label>
+            <input type="text" name="siteUrl">
+        </div>
+        <div>
+            <label for="">Дата запуска сайта:</label>
+            <input type="date" name="siteDate">
+        </div>
+        <div>
+            <label for="">Посетителей в сутки:</label>
+            <input type="number" name="visitors">
+        </div>
+        <div>
+            <label for="">E-mail для связи:</label>
+            <input type="text" name="mail">
+        </div>
+        <div class="select">
+            <label for="">Рубрика каталога:</label>
+            <select name="select">
+                <option value="1">здоровье</option>
+                <option value="2">домашний уют</option>
+                <option value="3">бытовая техника</option>
+            </select>
+        </div>
+        <div class="radio">
+            <label for="">Размещение:</label>
+            <div>
+                <input type="radio" name="payment" value="1">
+                <label>бесплатное</label>
+            </div>
+            <div>
+                <input type="radio" name="payment" value="2">
+                <label>платное</label>
+            </div>
+            <div>
+                <input type="radio" name="payment" value="3">
+                <label>VIP</label>
+            </div>
+        </div>
+        <div class="check">
+            <label for="">Разрешить отзывы:</label>
+            <input type="checkbox" name="check">
+        </div>
+        <div class="text-area">
+            <label for="">Описание сайта:</label>
+            <textarea name="description"></textarea>
+        </div>
+        <button type="submit">Опубликовать</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+div {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+div > input {
+  height: 20px;
+}
+div > select {
+  height: 20px;
+}
+
+.check {
+  display: flex;
+  justify-content: left;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+.text-area > textarea {
+  height: 100px;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=style.css.map */
