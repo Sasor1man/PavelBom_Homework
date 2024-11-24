@@ -28,4 +28,12 @@ div > select {
 button {
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.incorrect {
+  border: 2px solid red;
+}
+
+.correct {
+  border: 2px solid green;
 }/*# sourceMappingURL=style.css.map */
