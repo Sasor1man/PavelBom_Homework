@@ -1,3 +1,4 @@
+//todo rework date comparsion
 const inputs = document.querySelectorAll("input");
 const textarea = document.querySelector("textarea");
 const button = document.querySelector("button");
@@ -10,7 +11,7 @@ const checkUrl = value => {
 }
 
 const checkMail = value => {
-    const reg = /\w+@[\w]\.[a-z]/i;
+    const reg = /\w+\@[\w]\.[a-z]/i;
     return reg.test(value)
 }
 
