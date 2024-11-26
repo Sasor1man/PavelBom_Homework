@@ -13,15 +13,56 @@ const cars = [
         price: 100000,
         year: 2020,
         transmissionType: 'automatic'
+    },{
+        brand: 'Mercedes',
+        model: 'AMG GT',
+        imgUrl: 'photos/images.jpeg',
+        price: 10000,
+        year: 2020,
+        transmissionType: 'automatic'
+    },,{
+        brand: 'Mercedes',
+        model: 'AMG GT',
+        imgUrl: 'photos/images.jpeg',
+        price: 150000,
+        year: 2020,
+        transmissionType: 'automatic'
+    },{
+        brand: 'Mercedes',
+        model: 'AMG GT',
+        imgUrl: 'photos/images.jpeg',
+        price: 300000,
+        year: 2020,
+        transmissionType: 'automatic'
+    }
+    ,{
+        brand: 'Mercedes',
+        model: 'AMG GT',
+        imgUrl: 'photos/images.jpeg',
+        price: 340000,
+        year: 2020,
+        transmissionType: 'automatic'
+    },{
+        brand: 'Mercedes',
+        model: 'AMG GT',
+        imgUrl: 'photos/images.jpeg',
+        price: 300000,
+        year: 2020,
+        transmissionType: 'automatic'
     }
 ];
+
+const filterByPriceLabel = document.querySelector('[for=filterByPrice]');
+const filterByPriceInput = document.getElementById('filterByPrice');
+const sortUp = document.querySelector('.sortUp');
+const sortDown = document.querySelector('.sortDown');
 
 const addCar = () => {
     const inputs = document.querySelectorAll('input[name]');
     const select = document.querySelector('select');
-
+    
     const car = {};
-
+    
     for(const inp of inputs) {
         car[inp.name] = inp.value
     }
@@ -48,3 +89,24 @@ const render = data => {
 }
 
 render(cars)
+
+filterByPriceInput.addEventListener('input', e => {
+    filterByPriceLabel.innerHTML = `${e.target.value} $`;
+
+    const filterdCars = cars.filter(car => parseInt(car.price) <= parseInt(e.target.value));
+
+    render(filterdCars)
+})
+
+sortUp.addEventListener('click', () => {
+    cars.sort(a,b => a.price - b.price)
+
+    render(cars)
+})
+
+sortDown.addEventListener('click', () => {
+    cars.sort(a,b => b.price - a.price)
+
+    render(cars)
+})
+
