@@ -1,4 +1,3 @@
-//todo rework date comparsion
 const inputs = document.querySelectorAll("input");
 const textarea = document.querySelector("textarea");
 const button = document.querySelector("button");
@@ -11,7 +10,7 @@ const checkUrl = value => {
 }
 
 const checkMail = value => {
-    const reg = /\w+\@[\w]\.[a-z]/i;
+    const reg = /\w+\@\w+\.[a-z]+/i;
     return reg.test(value)
 }
 
@@ -23,11 +22,22 @@ const checkText = tag => {
     }
 }
 
+const dateCompare = (today, checkingDay) => {
+    if (today.getFullYear() >= checkingDay.getFullYear()) {
+        if (today.getMonth() >= checkingDay.getMonth()) {
+            if (today.getDay() >= checkingDay.getDay()) {
+                return false
+            }
+        }
+    }
+    return true
+}
+
 const checkDate = date => {
     const arrayDate = date.split('-');
     const now = new Date();
-    const currectDate = new Date(arrayDate[0], arrayDate[1] + 1, arrayDate[2]);
-    return currectDate >= now
+    const currectDate = new Date(parseInt(arrayDate[0]), parseInt(arrayDate[1]) - 1, parseInt(arrayDate[2]));
+    return dateCompare(now, currectDate)
 }
 
 const checkInput = input => {
