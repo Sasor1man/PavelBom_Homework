@@ -66,14 +66,35 @@
     </select><br><br> -->
     <!-- <button onclick="addCar()">add</button> -->
 
-    <fieldset class="filterByPrice">
+    <fieldset class="filterByPrice fieldset">
         <legend>filter by price</legend>
         <label for="filterByPrice" class="form-label">Example range</label>
-        <input type="range" class="form-range" id="filterByPrice" min="10000" max="1000000" step="10000">
+        <input type="range" class="form-range" id="filterByPrice" min="10000" max="500000" step="10000">
     </fieldset>
 
-    <button class="sortUp">Up</button>
-    <button class="sortDown">Down</button>
+    <fieldset class="fieldset">
+        <label for="fieldset">price filter</label>
+        <button class="sortUp">Up</button>
+        <button class="sortDown">Down</button>
+    </fieldset>
+
+    <fieldset class="fieldset">
+        <label>year filter</label>
+        <button id="sortUpYear">Up</button>
+        <button id="sortDownYear">Down</button>
+    </fieldset>
+
+    <fieldset class="fieldset">
+        <label>brand filter</label>
+        <div>
+            <label>Mercedes</label>
+            <input type="checkbox" name="Mercedes">
+            <label>Audi</label>
+            <input type="checkbox" name="Audi">
+            <label>Mitsubishi</label>
+            <input type="checkbox" name="Mitsubishi">
+        </div>
+    </fieldset>
 
     <div id="wrap">
     </div>
