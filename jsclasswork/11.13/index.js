@@ -52,6 +52,8 @@ const sortUpYear = document.getElementById('sortUpYear');
 const sortDownYear = document.getElementById('sortDownYear');
 const checkboxes = document.querySelectorAll('[type=checkbox]')
 
+let filterdCars = cars;
+
 
 const addCar = () => {
     const inputs = document.querySelectorAll('input[name]');
@@ -67,6 +69,8 @@ const addCar = () => {
     console.log(cars);
 }
 
+const addHtml = tag => document.getElementById('wrap').innerHTML = tag
+
 const render = data => {
     const carsHtml = data.map(car => `
         <div class="card" style="width: 18rem;">
@@ -74,50 +78,52 @@ const render = data => {
             <div class="card-body">
                 <h5 class="card-title">${car.model}</h5>
                 <div class="car-color"></div>
-                <p class="card-text car-price">price: ${car.price}</p>
+                <p class="card-text car-price">price: ${car.price}$</p>
                 <p class="card-text car-year">year: ${car.year}</p>
                 <p class=" card-textcar-transmission">transmission: ${car.transmissionType}</p>
                 <a href="#" class="btn btn-primary">Buy</a>
             </div>
         </div>
         `).join('')
-    const wrap = document.getElementById('wrap').innerHTML = carsHtml
+    // const wrap = document.getElementById('wrap').innerHTML = carsHtml
+    return carsHtml
 }
 
-render(cars)
-
-filterByPriceInput.addEventListener('input', e => {
-    filterByPriceLabel.innerHTML = `${e.target.value} $`;
-    const filterdCars = cars.filter(car => parseInt(car.price) <= parseInt(e.target.value));
-    render(filterdCars)
-})
-
-const checkboxFunc = e => {
-
-}
+addHtml(render(cars))
 
 sortUp.addEventListener('click', () => {
-    cars.sort((a, b) => a.price - b.price)
+    filterdCars.sort((a, b) => a.price - b.price)
 
-    render(cars)
+    addHtml(render(filterdCars))
 })
 
 sortDown.addEventListener('click', () => {
-    cars.sort((a, b) => b.price - a.price)
+    filterdCars.sort((a, b) => b.price - a.price)
 
-    render(cars)
+    addHtml(render(filterdCars))
 })
 
 sortUpYear.addEventListener('click', () => {
-    cars.sort((a, b) => a.year - b.year)
+    filterdCars.sort((a, b) => a.year - b.year)
 
-    render(cars)
+    addHtml(render(filterdCars))
 })
 
 sortDownYear.addEventListener('click', () => {
-    cars.sort((a, b) => b.year - a.year)
+    filterdCars.sort((a, b) => b.year - a.year)
 
-    render(cars)
+    addHtml(render(filterdCars))
 })
 
-// checkboxes.forEach(input => input.addEventListener('click', checkboxFunc))
+const checkboxFunc = e => {
+    const inputArray = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+    filterdCars = cars.filter(car => inputArray.some(input => car[input.name] === input.value));
+    addHtml(render(filterdCars));
+}
+
+filterByPriceInput.addEventListener('input', e => {
+    filterByPriceLabel.innerHTML = `${e.target.value} $`;
+    filterdCars = cars.filter(car => parseInt(car.price) <= parseInt(e.target.value));
+    addHtml(render(filterdCars))
+})
+checkboxes.forEach(input => input.addEventListener('click', checkboxFunc))
